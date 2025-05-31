@@ -26,11 +26,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-black relative overflow-hidden">
-      {/* Gradient accent */}
-      <div className="absolute -top-40 -left-40 w-80 h-80 bg-violet-900/20 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-violet-900/20 rounded-full blur-3xl"></div>
-      
+    <section id="about" className="py-24 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-300 text-transparent bg-clip-text">
@@ -45,9 +41,9 @@ const About: React.FC = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="p-8 rounded-2xl bg-gradient-to-b from-gray-900 to-black border border-gray-800 transition-all duration-300 hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-900/20"
+              className="p-8 rounded-2xl bg-black/20 backdrop-blur-sm border border-gray-800/30 transition-all duration-300 hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-900/20"
             >
-              <div className="mb-5 p-3 rounded-xl bg-gray-800/50 w-fit">
+              <div className="mb-5 p-3 rounded-xl bg-gray-800/20 w-fit">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
@@ -56,7 +52,7 @@ const About: React.FC = () => {
           ))}
         </div>
         
-        <div className="mt-24 bg-gradient-to-r from-gray-900 via-violet-950 to-gray-900 rounded-2xl p-10 md:p-16">
+        <div className="mt-24">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
@@ -69,7 +65,7 @@ const About: React.FC = () => {
                 {t.about.mission.description2}
               </p>
             </div>
-            <div className="bg-gradient-to-tr from-violet-900/20 to-fuchsia-900/20 rounded-2xl p-8 border border-violet-500/10">
+            <div className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10">
               <blockquote className="text-xl md:text-2xl italic text-gray-200 font-light">
                 "{t.about.quote}"
                 <footer className="mt-4 text-sm text-gray-400 not-italic">

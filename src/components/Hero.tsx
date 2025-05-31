@@ -10,11 +10,8 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
-      {/* Particle animation background */}
-      <ParticleBackground />
-      
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-950/90 via-black/80 to-black/90 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-950/50 via-black/50 to-black/50 z-10"></div>
       
       <div className="relative z-20 h-full flex flex-col justify-center px-6 md:px-16 max-w-7xl mx-auto">
         <div className="space-y-6 md:space-y-8 max-w-3xl">

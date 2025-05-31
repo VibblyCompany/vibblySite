@@ -29,11 +29,10 @@ const Services: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-black relative overflow-hidden">
+    <section id="services" className="py-24 relative overflow-hidden">
       {/* Animated background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950 to-black"></div>
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-violet-900/10 blur-3xl rounded-full"></div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-violet-900/10 blur-3xl rounded-full"></div>
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-violet-900/5 blur-3xl rounded-full"></div>
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-violet-900/5 blur-3xl rounded-full"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16">
         <div className="text-center mb-16">
@@ -45,13 +44,13 @@ const Services: React.FC = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gradient-to-b from-gray-900 to-gray-950 border border-gray-800 rounded-2xl p-8 transition-all duration-300 hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-900/20 group"
+              className="bg-black/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8 transition-all duration-300 hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-900/20 group"
             >
-              <div className="p-4 bg-gray-800/30 rounded-xl w-fit mb-6 group-hover:bg-violet-900/20 transition-colors duration-300">
+              <div className="p-4 bg-gray-800/20 rounded-xl w-fit mb-6 group-hover:bg-violet-900/20 transition-colors duration-300">
                 {service.icon}
               </div>
               
@@ -72,7 +71,7 @@ const Services: React.FC = () => {
         
         <div className="mt-24 text-center">
           <div className="inline-block p-1 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full">
-            <button className="bg-gray-950 text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300">
+            <button className="bg-black/30 backdrop-blur-sm text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300">
               {t.services.cta}
             </button>
           </div>

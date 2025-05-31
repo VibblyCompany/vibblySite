@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       id="portfolio"
-      className="py-24 bg-gray-950 relative overflow-hidden"
+      className="py-24 bg-violet-950/80 backdrop-blur-sm relative overflow-hidden"
     >
       {/* Gradient accent */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-violet-600 to-transparent opacity-30"></div>

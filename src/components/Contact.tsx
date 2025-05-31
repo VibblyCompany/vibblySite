@@ -32,9 +32,9 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-black relative overflow-hidden">
+    <section id="contact" className="py-24 relative overflow-hidden">
       {/* Gradient accent */}
-      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-900/10 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-900/5 rounded-full blur-3xl"></div>
       
       <div className="max-w-7xl mx-auto px-6 md:px-16 relative z-10">
         <div className="text-center mb-16">
@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
         
         <div className="grid md:grid-cols-2 gap-10 items-start">
           {/* Contact form */}
-          <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 shadow-lg">
+          <div className="bg-black/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
             {formData.submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center py-10">
                 <div className="mb-6 p-3 rounded-full bg-green-500/20 text-green-400">
@@ -70,7 +70,8 @@ const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-900/30 border border-gray-800/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50"
+                    placeholder={t.contact.form.namePlaceholder}
                   />
                 </div>
                 
@@ -85,7 +86,8 @@ const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 bg-gray-900/30 border border-gray-800/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50"
+                    placeholder={t.contact.form.emailPlaceholder}
                   />
                 </div>
                 
@@ -96,20 +98,20 @@ const Contact: React.FC = () => {
                   <textarea
                     id="message"
                     name="message"
-                    rows={5}
+                    rows={4}
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-gray-900/30 border border-gray-800/50 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/50"
+                    placeholder={t.contact.form.messagePlaceholder}
                   ></textarea>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-3 px-6 rounded-lg font-medium flex items-center justify-center hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-3 px-6 rounded-lg font-medium hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300"
                 >
                   {t.contact.form.submit}
-                  <Send className="ml-2 w-4 h-4" />
                 </button>
               </form>
             )}
@@ -117,7 +119,7 @@ const Contact: React.FC = () => {
           
           {/* Contact info */}
           <div className="space-y-8">
-            <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
+            <div className="bg-black/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
               <h3 className="text-xl font-semibold text-white mb-6">{t.contact.schedule.title}</h3>
               <button className="w-full flex items-center justify-center bg-violet-600/20 border border-violet-500/30 text-violet-300 py-3 px-6 rounded-lg font-medium hover:bg-violet-600/30 transition-all duration-300">
                 <Calendar className="mr-2 w-5 h-5" />
@@ -125,7 +127,7 @@ const Contact: React.FC = () => {
               </button>
             </div>
             
-            <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8">
+            <div className="bg-black/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
               <h3 className="text-xl font-semibold text-white mb-6">{t.contact.info.title}</h3>
               <div className="space-y-4">
                 <div>
