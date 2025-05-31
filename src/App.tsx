@@ -9,28 +9,35 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';
+import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="min-h-screen bg-black text-white">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={
-              <main>
-                <section id="home">
-                  <Hero />
-                </section>
-                <About />
-                <Portfolio />
-                <Services />
-                <Contact />
-              </main>
-            } />
-            <Route path="/portfolio/:id" element={<ProjectPage />} />
-          </Routes>
-          <Footer />
+        <div className="relative min-h-screen bg-black text-white">
+          {/* Single global particle background with cursor effect */}
+          <ParticleBackground density="high" fadeDirection="down" />
+          
+          {/* Content */}
+          <div className="relative z-10">
+            <Navbar />
+            <Routes>
+              <Route path="/" element={
+                <main>
+                  <section id="home">
+                    <Hero />
+                  </section>
+                  <About />
+                  <Portfolio />
+                  <Services />
+                  <Contact />
+                </main>
+              } />
+              <Route path="/portfolio/:id" element={<ProjectPage />} />
+            </Routes>
+            <Footer />
+          </div>
         </div>
       </Router>
     </LanguageProvider>
