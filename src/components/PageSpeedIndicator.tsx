@@ -15,7 +15,7 @@ interface PageSpeedIndicatorProps {
 
 const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportUrl }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-100px" });
 
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-400';
@@ -49,7 +49,8 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
       >
         PageSpeed Insights
       </motion.h3>
-      <div className="relative grid grid-cols-2 md:grid-cols-4 gap-8">
+      
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {scores.map((score, index) => (
           <motion.div
             key={index}
@@ -129,7 +130,6 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
               >
                 {score.category}
               </motion.p>
-              
               <div className="absolute opacity-0 group-hover:opacity-100 transition-all duration-300 bottom-full mb-2 p-4 bg-gray-900/95 backdrop-blur-xl rounded-xl text-sm text-gray-300 w-48 text-center shadow-xl transform -translate-y-2 group-hover:translate-y-0 border border-gray-700/30">
                 {score.description}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
