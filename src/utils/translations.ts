@@ -69,13 +69,15 @@ export const translations = {
         gallery: [
           'https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370806/pexels-photo-8370806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370727/pexels-photo-8370727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/8370727/pexels-photo-8370727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/8370735/pexels-photo-8370735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/8370742/pexels-photo-8370742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       },
       project2: {
-        title: 'E-commerce Platform',
-        description: 'Custom-built e-commerce solution with advanced product filtering, recommendations, and seamless checkout experience.',
+        title: 'Safe trip vax',
+        description: 'Takie tam ze szcepionkami.',
         category: 'e-commerce',
         fullDescription: [
           'This custom e-commerce platform was built from the ground up to provide a unique shopping experience that combines powerful functionality with elegant design.',
@@ -92,7 +94,9 @@ export const translations = {
           'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       },
       project3: {
@@ -114,7 +118,9 @@ export const translations = {
           'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7579544/pexels-photo-7579544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7579551/pexels-photo-7579551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579570/pexels-photo-7579570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/7579570/pexels-photo-7579570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7579585/pexels-photo-7579585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7579598/pexels-photo-7579598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       },
       project4: {
@@ -136,7 +142,9 @@ export const translations = {
           'https://images.pexels.com/photos/7412069/pexels-photo-7412069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7412089/pexels-photo-7412089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412081/pexels-photo-7412081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/7412081/pexels-photo-7412081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7412075/pexels-photo-7412075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7412065/pexels-photo-7412065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       }
     },
@@ -296,8 +304,10 @@ export const translations = {
         gallery: [
           'https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370806/pexels-photo-8370806.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370727/pexels-photo-8370727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/8370727/pexels-photo-8370727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/8370735/pexels-photo-8370735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/8370742/pexels-photo-8370742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       },
       project2: {
@@ -319,7 +329,9 @@ export const translations = {
           'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       },
       project3: {
@@ -341,7 +353,9 @@ export const translations = {
           'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7579544/pexels-photo-7579544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7579551/pexels-photo-7579551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579570/pexels-photo-7579570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/7579570/pexels-photo-7579570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7579585/pexels-photo-7579585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7579598/pexels-photo-7579598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       },
       project4: {
@@ -363,7 +377,9 @@ export const translations = {
           'https://images.pexels.com/photos/7412069/pexels-photo-7412069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7412089/pexels-photo-7412089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412081/pexels-photo-7412081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+          'https://images.pexels.com/photos/7412081/pexels-photo-7412081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7412075/pexels-photo-7412075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/7412065/pexels-photo-7412065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
       }
     },
