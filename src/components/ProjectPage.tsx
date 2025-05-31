@@ -72,14 +72,14 @@ const ProjectPage: React.FC = () => {
           alt={project.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center max-w-4xl px-6">
             <motion.h1 
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text"
+              className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
             >
               {project.title}
             </motion.h1>
@@ -96,38 +96,38 @@ const ProjectPage: React.FC = () => {
       </div>
 
       {/* Project Summary */}
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-        className="bg-gradient-to-r from-gray-900 via-violet-900/10 to-gray-900 border-y border-gray-800/50 backdrop-blur-xl"
-      >
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-6">
-          <div className="flex flex-wrap justify-center gap-8 text-sm">
+      <div className="relative z-10 -mt-20 mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="max-w-7xl mx-auto px-6 md:px-16"
+        >
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8">
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="flex items-center text-gray-300 bg-gray-800/50 px-4 py-2 rounded-full backdrop-blur-sm"
+              className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
             >
               <Clock className="w-5 h-5 mr-2 text-violet-400" />
               <span>Duration: {project.duration}</span>
             </motion.div>
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="flex items-center text-gray-300 bg-gray-800/50 px-4 py-2 rounded-full backdrop-blur-sm"
+              className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
             >
               <Briefcase className="w-5 h-5 mr-2 text-violet-400" />
               <span>Type: {project.projectType}</span>
             </motion.div>
             <motion.div 
               whileHover={{ scale: 1.05 }}
-              className="flex items-center text-gray-300 bg-gray-800/50 px-4 py-2 rounded-full backdrop-blur-sm"
+              className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
             >
               <Calendar className="w-5 h-5 mr-2 text-violet-400" />
               <span>Year: {project.year}</span>
             </motion.div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
 
       {/* Back Button */}
       <div className="max-w-7xl mx-auto px-6 md:px-16 py-8">
@@ -151,7 +151,7 @@ const ProjectPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-3xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text"
+                className="text-3xl font-bold mb-6 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
               >
                 {t.portfolio.overview}
               </motion.h2>
@@ -193,7 +193,7 @@ const ProjectPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="mt-16"
               >
-                <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
+                <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text">
                   {t.portfolio.gallery}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -205,7 +205,7 @@ const ProjectPage: React.FC = () => {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       whileHover={{ scale: 1.02 }}
-                      className="rounded-lg overflow-hidden shadow-lg shadow-violet-900/10"
+                      className="rounded-2xl overflow-hidden shadow-2xl shadow-violet-900/20 border border-violet-500/10"
                     >
                       <img
                         src={image}
@@ -227,9 +227,9 @@ const ProjectPage: React.FC = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-gray-900 via-gray-900 to-violet-900/20 rounded-2xl p-8 mb-8 border border-gray-800/50 backdrop-blur-xl"
+              className="bg-gradient-to-br from-gray-900/80 via-gray-900/90 to-violet-900/20 rounded-3xl p-8 mb-8 border border-violet-500/10 shadow-2xl shadow-violet-900/20 backdrop-blur-2xl"
             >
-              <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text">
+              <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text">
                 {t.portfolio.projectDetails}
               </h3>
               <div className="space-y-4">
@@ -249,7 +249,7 @@ const ProjectPage: React.FC = () => {
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: index * 0.1 }}
                           whileHover={{ scale: 1.05 }}
-                          className="px-3 py-1 bg-violet-900/30 text-violet-300 rounded-full text-sm border border-violet-500/10 shadow-lg shadow-violet-900/10"
+                          className="px-4 py-2 bg-violet-900/30 text-violet-300 rounded-xl text-sm border border-violet-500/10 shadow-lg shadow-violet-900/10"
                         >
                           {tech}
                         </motion.span>
@@ -267,7 +267,7 @@ const ProjectPage: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-violet-900/20 via-gray-900 to-gray-900 rounded-2xl p-8 border border-violet-500/10 shadow-lg shadow-violet-900/10 backdrop-blur-xl"
+                className="bg-gradient-to-br from-gray-900/80 via-gray-900/90 to-violet-900/20 rounded-3xl p-8 border border-violet-500/10 shadow-2xl shadow-violet-900/20 backdrop-blur-2xl"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 rounded-full bg-violet-600/20 flex items-center justify-center text-violet-400 font-bold text-xl border border-violet-500/10 shadow-lg shadow-violet-900/20">

@@ -30,25 +30,26 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
   };
 
   const getGlowColor = (score: number) => {
-    if (score >= 90) return 'shadow-green-500/20';
-    if (score >= 50) return 'shadow-orange-500/20';
-    return 'shadow-red-500/20';
+    if (score >= 90) return 'shadow-green-500/30';
+    if (score >= 50) return 'shadow-orange-500/30';
+    return 'shadow-red-500/30';
   };
 
   return (
     <div 
       ref={ref}
-      className="bg-gradient-to-br from-gray-900 via-gray-900 to-violet-900/20 rounded-2xl p-8 mb-8 border border-gray-800/50 backdrop-blur-xl"
+      className="relative bg-gradient-to-br from-gray-900/80 via-gray-900/90 to-violet-900/20 rounded-3xl p-8 mb-8 border border-violet-500/10 shadow-2xl shadow-violet-900/20 backdrop-blur-2xl"
     >
+      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-transparent rounded-3xl"></div>
       <motion.h3 
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 text-transparent bg-clip-text"
+        className="relative text-xl font-bold mb-8 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
       >
         PageSpeed Insights
       </motion.h3>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="relative grid grid-cols-2 md:grid-cols-4 gap-8">
         {scores.map((score, index) => (
           <motion.div
             key={index}
@@ -58,14 +59,20 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
             className="relative group"
           >
             <div className="flex flex-col items-center">
-              <div className={`relative rounded-full ${getGlowColor(score.score)} shadow-lg transition-shadow duration-300 group-hover:shadow-xl`}>
-                <svg className="w-24 h-24" viewBox="0 0 100 100">
-                  {/* Background circle with gradient */}
+              <div className={`relative rounded-full ${getGlowColor(score.score)} shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105`}>
+                <svg className="w-28 h-28" viewBox="0 0 100 100">
                   <defs>
                     <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#1f2937" />
-                      <stop offset="100%" stopColor="#111827" />
+                      <stop offset="0%" stopColor="#1a1f2e" />
+                      <stop offset="100%" stopColor="#0f1117" />
                     </linearGradient>
+                    <filter id="glow">
+                      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                      <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
                   </defs>
                   <circle
                     cx="50"
@@ -79,7 +86,7 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
                     cy="50"
                     r="45"
                     fill="none"
-                    stroke="#1f2937"
+                    stroke="#2a2f3c"
                     strokeWidth="8"
                     className="transition-all duration-300"
                   />
@@ -96,6 +103,7 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
                     transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.2 }}
                     transform="rotate(-90 50 50)"
                     strokeDasharray="283"
+                    filter="url(#glow)"
                     className="transition-all duration-300"
                   />
                   <motion.text
@@ -122,10 +130,10 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
                 {score.category}
               </motion.p>
               
-              <div className="absolute opacity-0 group-hover:opacity-100 transition-all duration-300 bottom-full mb-2 p-3 bg-gray-800/90 backdrop-blur-sm rounded-lg text-sm text-gray-300 w-48 text-center shadow-xl transform -translate-y-2 group-hover:translate-y-0">
+              <div className="absolute opacity-0 group-hover:opacity-100 transition-all duration-300 bottom-full mb-2 p-4 bg-gray-900/95 backdrop-blur-xl rounded-xl text-sm text-gray-300 w-48 text-center shadow-xl transform -translate-y-2 group-hover:translate-y-0 border border-gray-700/30">
                 {score.description}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                  <div className="border-8 border-transparent border-t-gray-800/90"></div>
+                  <div className="border-8 border-transparent border-t-gray-900/95"></div>
                 </div>
               </div>
             </div>
