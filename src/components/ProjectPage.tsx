@@ -5,6 +5,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
 import { motion } from 'framer-motion';
 import PageSpeedIndicator from './PageSpeedIndicator';
+import ClientBenefits from './ClientBenefits';
 
 const ProjectPage: React.FC = () => {
   const { id } = useParams();
@@ -251,6 +252,9 @@ const ProjectPage: React.FC = () => {
             )}
           </div>
         </div>
+
+        {/* Client Benefits - Full Width */}
+        <ClientBenefits />
 
         {/* Gallery - Full Width */}
         <motion.div 

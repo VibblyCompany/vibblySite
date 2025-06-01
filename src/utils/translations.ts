@@ -51,6 +51,42 @@ export const translations = {
       projectDetails: 'Project Details',
       category: 'Category',
       techStack: 'Technology Stack',
+      clientBenefits: {
+        title: 'Client Benefits',
+        subtitle: 'Key advantages that come with our web development services',
+        benefits: [
+          {
+            title: 'Better Google Visibility',
+            description: 'Enhanced SEO optimization for improved search engine rankings',
+            icon: 'Search'
+          },
+          {
+            title: 'More Customer Inquiries',
+            description: 'Increased lead generation through optimized conversion paths',
+            icon: 'Users'
+          },
+          {
+            title: 'Fast Mobile Performance',
+            description: 'Lightning-fast loading times across all devices',
+            icon: 'Smartphone'
+          },
+          {
+            title: 'Easy Site Updates',
+            description: 'User-friendly content management system for quick updates',
+            icon: 'Edit'
+          },
+          {
+            title: 'Secure SSL Connection',
+            description: 'Protected data transmission with industry-standard security',
+            icon: 'Shield'
+          },
+          {
+            title: 'Professional Design',
+            description: 'Modern, responsive design that builds trust and credibility',
+            icon: 'Layout'
+          }
+        ]
+      },
       project1: {
         title: 'Fintech Dashboard Redesign',
         description: 'A complete UX/UI overhaul for a financial technology platform, focusing on data visualization and user efficiency.',
@@ -286,6 +322,42 @@ export const translations = {
       projectDetails: 'Szczegóły Projektu',
       category: 'Kategoria',
       techStack: 'Technologie',
+      clientBenefits: {
+        title: 'Korzyści dla Klienta',
+        subtitle: 'Kluczowe zalety naszych usług tworzenia stron internetowych',
+        benefits: [
+          {
+            title: 'Lepsza Widoczność w Google',
+            description: 'Zaawansowana optymalizacja SEO dla lepszych pozycji w wyszukiwarkach',
+            icon: 'Search'
+          },
+          {
+            title: 'Więcej Zapytań Klientów',
+            description: 'Zwiększona generacja leadów dzięki zoptymalizowanym ścieżkom konwersji',
+            icon: 'Users'
+          },
+          {
+            title: 'Szybka Wydajność Mobilna',
+            description: 'Błyskawiczny czas ładowania na wszystkich urządzeniach',
+            icon: 'Smartphone'
+          },
+          {
+            title: 'Łatwe Aktualizacje',
+            description: 'Przyjazny system zarządzania treścią do szybkich aktualizacji',
+            icon: 'Edit'
+          },
+          {
+            title: 'Bezpieczne Połączenie SSL',
+            description: 'Chroniona transmisja danych z bezpieczeństwem na poziomie branżowym',
+            icon: 'Shield'
+          },
+          {
+            title: 'Profesjonalny Design',
+            description: 'Nowoczesny, responsywny design budujący zaufanie i wiarygodność',
+            icon: 'Layout'
+          }
+        ]
+      },
       project1: {
         title: 'Redesign Panelu Fintech',
         description: 'Kompletna przebudowa UX/UI dla platformy technologii finansowej, skupiająca się na wizualizacji danych i wydajności użytkownika.',

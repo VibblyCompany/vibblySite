@@ -44,7 +44,7 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
       <motion.h3 
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative text-xl font-bold mb-8 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
       >
         PageSpeed Insights
@@ -54,33 +54,39 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
         {scores.map((score, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+            transition={{ 
+              duration: 0.8,
+              delay: index * 0.15,
+              ease: [0.22, 1, 0.36, 1]
+            }}
             className="relative group"
           >
             <div className="flex flex-col items-center">
-              <div className={`relative rounded-full ${getGlowColor(score.score)} shadow-lg transition-all duration-500 group-hover:shadow-2xl group-hover:scale-105`}>
+              <div className={`relative rounded-full ${getGlowColor(score.score)} shadow-lg transition-all duration-700 group-hover:shadow-2xl group-hover:scale-105`}>
                 <svg className="w-28 h-28" viewBox="0 0 100 100">
                   <defs>
                     <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" stopColor="#1a1f2e" />
                       <stop offset="100%" stopColor="#0f1117" />
                     </linearGradient>
-                    <filter id="glow">
-                      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                    <filter id={`glow-${index}`}>
+                      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
                       <feMerge>
                         <feMergeNode in="coloredBlur"/>
                         <feMergeNode in="SourceGraphic"/>
                       </feMerge>
                     </filter>
                   </defs>
-                  <circle
+                  <motion.circle
                     cx="50"
                     cy="50"
                     r="45"
                     fill={`url(#gradient-${index})`}
-                    className="transition-all duration-300"
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                   />
                   <circle
                     cx="50"
@@ -89,7 +95,7 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
                     fill="none"
                     stroke="#2a2f3c"
                     strokeWidth="8"
-                    className="transition-all duration-300"
+                    className="opacity-50"
                   />
                   <motion.circle
                     cx="50"
@@ -101,11 +107,13 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
                     strokeLinecap="round"
                     initial={{ pathLength: 0 }}
                     animate={isInView ? { pathLength: score.score / 100 } : { pathLength: 0 }}
-                    transition={{ duration: 1.5, ease: "easeOut", delay: index * 0.2 }}
+                    transition={{ 
+                      duration: 2,
+                      delay: index * 0.2 + 0.3,
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
                     transform="rotate(-90 50 50)"
-                    strokeDasharray="283"
-                    filter="url(#glow)"
-                    className="transition-all duration-300"
+                    filter={`url(#glow-${index})`}
                   />
                   <motion.text
                     x="50"
@@ -114,28 +122,38 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
                     dy="7"
                     className={`text-2xl font-bold ${getScoreColor(score.score)}`}
                     fill="currentColor"
-                    initial={{ opacity: 0 }}
-                    animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 + 1 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                    transition={{ 
+                      duration: 0.5,
+                      delay: index * 0.2 + 1.2,
+                      ease: "easeOut"
+                    }}
                   >
                     {score.score}
                   </motion.text>
                 </svg>
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 p-4 bg-gray-900/95 backdrop-blur-xl rounded-xl text-sm text-gray-300 w-48 text-center shadow-xl border border-gray-700/30">
+                    {score.description}
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
+                      <div className="border-8 border-transparent border-t-gray-900/95"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <motion.p 
-                initial={{ opacity: 0 }}
-                animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 + 1.2 }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                transition={{ 
+                  duration: 0.5,
+                  delay: index * 0.2 + 1.5,
+                  ease: "easeOut"
+                }}
                 className="mt-4 text-sm font-medium text-gray-300"
               >
                 {score.category}
               </motion.p>
-              <div className="absolute opacity-0 group-hover:opacity-100 transition-all duration-300 bottom-full mb-2 p-4 bg-gray-900/95 backdrop-blur-xl rounded-xl text-sm text-gray-300 w-48 text-center shadow-xl transform -translate-y-2 group-hover:translate-y-0 border border-gray-700/30">
-                {score.description}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2">
-                  <div className="border-8 border-transparent border-t-gray-900/95"></div>
-                </div>
-              </div>
             </div>
           </motion.div>
         ))}
@@ -144,7 +162,7 @@ const PageSpeedIndicator: React.FC<PageSpeedIndicatorProps> = ({ scores, reportU
       <motion.a
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.6, delay: 1.5 }}
+        transition={{ duration: 0.8, delay: 2, ease: "easeOut" }}
         href={reportUrl}
         target="_blank"
         rel="noopener noreferrer"
