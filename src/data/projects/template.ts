@@ -1,7 +1,12 @@
-import { Project } from './types';
+import { Project, createPageSpeedScores } from './types';
 
 export const projectTemplate: Project = {
   id: 'project-id', // Unique identifier for the project
+  stack: [
+    'Technology 1',
+    'Technology 2',
+    'Technology 3'
+  ],
   translations: {
     en: {
       title: 'Project Title',
@@ -11,11 +16,6 @@ export const projectTemplate: Project = {
         'First paragraph of detailed description',
         'Second paragraph of detailed description',
         'Third paragraph of detailed description'
-      ],
-      stack: [
-        'Technology 1',
-        'Technology 2',
-        'Technology 3'
       ],
       testimonial: {
         quote: 'Client testimonial quote',
@@ -31,11 +31,6 @@ export const projectTemplate: Project = {
         'Pierwszy paragraf szczegółowego opisu',
         'Drugi paragraf szczegółowego opisu',
         'Trzeci paragraf szczegółowego opisu'
-      ],
-      stack: [
-        'Technologia 1',
-        'Technologia 2',
-        'Technologia 3'
       ],
       testimonial: {
         quote: 'Cytat z opinii klienta',
@@ -59,28 +54,12 @@ export const projectTemplate: Project = {
     year: 'Project Year', // e.g., '2024'
     projectType: 'Project Type', // e.g., 'Web Application'
     projectUrl: 'https://project-url.com',
-    pageSpeedScores: [
-      {
-        category: 'Performance',
-        score: 0,
-        description: 'Measures how fast the page loads and becomes interactive'
-      },
-      {
-        category: 'Accessibility',
-        score: 0,
-        description: 'Ensures content is accessible to all users'
-      },
-      {
-        category: 'Best Practices',
-        score: 0,
-        description: 'Follows modern web development best practices'
-      },
-      {
-        category: 'SEO',
-        score: 0,
-        description: 'Optimized for search engine visibility'
-      }
-    ],
+    pageSpeedScores: createPageSpeedScores({
+      'Performance': 0,
+      'Accessibility': 0,
+      'Best Practices': 0,
+      'SEO': 0
+    }),
     pageSpeedUrl: 'https://pagespeed.web.dev/'
   }
 }; 

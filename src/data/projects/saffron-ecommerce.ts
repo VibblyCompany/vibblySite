@@ -1,7 +1,8 @@
-import { Project } from './types';
+import { Project, createPageSpeedScores } from './types';
 
 export const saffronEcommerce: Project = {
   id: 'saffron-ecommerce',
+  stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
   translations: {
     en: {
       title: 'Saffron E-commerce Platform',
@@ -12,7 +13,6 @@ export const saffronEcommerce: Project = {
         'The platform features advanced product management capabilities, real-time inventory tracking, and seamless integration with multiple payment gateways.',
         'Built with scalability in mind, Saffron handles high traffic volumes while maintaining exceptional performance and user experience.'
       ],
-      stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
       testimonial: {
         quote: 'Saffron has transformed our online business. The platform is not only beautiful but also incredibly efficient to manage.',
         author: 'Michael Anderson',
@@ -28,7 +28,6 @@ export const saffronEcommerce: Project = {
         'Platforma oferuje zaawansowane możliwości zarządzania produktami, śledzenie stanów magazynowych w czasie rzeczywistym oraz płynną integrację z wieloma bramkami płatności.',
         'Zbudowana z myślą o skalowalności, Saffron obsługuje duże wolumeny ruchu, zachowując wyjątkową wydajność i doświadczenie użytkownika.'
       ],
-      stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
       testimonial: {
         quote: 'Saffron zrewolucjonizował nasz biznes online. Platforma jest nie tylko piękna, ale także niezwykle wydajna w zarządzaniu.',
         author: 'Michael Anderson',
@@ -54,28 +53,12 @@ export const saffronEcommerce: Project = {
     year: "2024",
     projectType: "E-commerce Platform",
     projectUrl: "https://saffron-ecommerce.com",
-    pageSpeedScores: [
-      {
-        category: "Performance",
-        score: 95,
-        description: "Measures how fast the page loads and becomes interactive"
-      },
-      {
-        category: "Accessibility",
-        score: 98,
-        description: "Ensures content is accessible to all users"
-      },
-      {
-        category: "Best Practices",
-        score: 97,
-        description: "Follows modern web development best practices"
-      },
-      {
-        category: "SEO",
-        score: 96,
-        description: "Optimized for search engine visibility"
-      }
-    ],
+    pageSpeedScores: createPageSpeedScores({
+      'Performance': 95,
+      'Accessibility': 98,
+      'Best Practices': 97,
+      'SEO': 96
+    }),
     pageSpeedUrl: "https://pagespeed.web.dev/"
   }
 }; 
