@@ -1,11 +1,14 @@
 import { Project } from './types';
 import { fintechDashboard } from './fintech-dashboard';
 import { saffronEcommerce } from './saffron-ecommerce';
+import { saffronThyme } from './saffron-thyme';
+
 
 // Export all projects
 export const projects: Project[] = [
   fintechDashboard,
-  saffronEcommerce
+  saffronEcommerce,
+  saffronThyme
 ];
 
 // Helper functions
