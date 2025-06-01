@@ -15,7 +15,7 @@ export const translations = {
       cta: 'Let\'s Build Together'
     },
     about: {
-      title: 'About Vibly',
+      title: 'About Vibbly',
       subtitle: 'We\'re a team of passionate digital creators building experiences that stand out in today\'s crowded digital landscape.',
       feature1: {
         title: 'Creative Vision',
@@ -31,7 +31,7 @@ export const translations = {
       },
       mission: {
         title: 'Our Mission',
-        description1: 'At Vibly, we believe that technology should enhance human experiences, not complicate them.',
+        description1: 'At Vibbly, we believe that technology should enhance human experiences, not complicate them.',
         description2: 'We\'re committed to creating digital solutions that are intuitive, accessible, and provide real value to users and businesses alike.'
       },
       quote: 'We don\'t just build websites and applications. We craft digital experiences that tell stories, solve problems, and create meaningful connections.',
@@ -182,6 +182,30 @@ export const translations = {
           'https://images.pexels.com/photos/7412075/pexels-photo-7412075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7412065/pexels-photo-7412065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
+      },
+      project5: {
+        title: 'Saffron E-commerce Platform',
+        description: 'Modern e-commerce solution with advanced product management and seamless payment integration.',
+        category: 'e-commerce',
+        fullDescription: [
+          'Saffron is a cutting-edge e-commerce platform designed to provide businesses with a powerful yet intuitive solution for online retail.',
+          'The platform features advanced product management capabilities, real-time inventory tracking, and seamless integration with multiple payment gateways.',
+          'Built with scalability in mind, Saffron handles high traffic volumes while maintaining exceptional performance and user experience.'
+        ],
+        stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
+        testimonial: {
+          quote: 'Saffron has transformed our online business. The platform is not only beautiful but also incredibly efficient to manage.',
+          author: 'Michael Anderson',
+          role: 'CEO, StyleHub'
+        },
+        gallery: [
+          'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ]
       }
     },
     services: {
@@ -244,7 +268,7 @@ export const translations = {
       }
     },
     footer: {
-      description: 'Vibly is a creative tech agency specializing in premium digital experiences for forward-thinking companies and brands.',
+      description: 'Vibbly is a creative tech agency specializing in premium digital experiences for forward-thinking companies and brands.',
       quickLinks: {
         title: 'Quick Links',
         links: [
@@ -286,7 +310,7 @@ export const translations = {
       cta: 'Zbudujmy Coś Razem'
     },
     about: {
-      title: 'O Vibly',
+      title: 'O Vibbly',
       subtitle: 'Jesteśmy zespołem pasjonatów tworzących cyfrowe doświadczenia, które wyróżniają się w dzisiejszym zatłoczonym krajobrazie cyfrowym.',
       feature1: {
         title: 'Kreatywna Wizja',
@@ -302,7 +326,7 @@ export const translations = {
       },
       mission: {
         title: 'Nasza Misja',
-        description1: 'W Vibly wierzymy, że technologia powinna wzbogacać ludzkie doświadczenia, a nie je komplikować.',
+        description1: 'W Vibbly wierzymy, że technologia powinna wzbogacać ludzkie doświadczenia, a nie je komplikować.',
         description2: 'Jesteśmy zaangażowani w tworzenie rozwiązań cyfrowych, które są intuicyjne, dostępne i zapewniają rzeczywistą wartość zarówno użytkownikom, jak i firmom.'
       },
       quote: 'Nie tylko budujemy strony internetowe i aplikacje. Tworzymy cyfrowe doświadczenia, które opowiadają historie, rozwiązują problemy i tworzą znaczące połączenia.',
@@ -453,6 +477,30 @@ export const translations = {
           'https://images.pexels.com/photos/7412075/pexels-photo-7412075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
           'https://images.pexels.com/photos/7412065/pexels-photo-7412065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
         ]
+      },
+      project5: {
+        title: 'Platforma E-commerce Saffron',
+        description: 'Nowoczesne rozwiązanie e-commerce z zaawansowanym zarządzaniem produktami i płynną integracją płatności.',
+        category: 'e-commerce',
+        fullDescription: [
+          'Saffron to nowoczesna platforma e-commerce zaprojektowana, aby zapewnić firmom potężne, a jednocześnie intuicyjne rozwiązanie do sprzedaży online.',
+          'Platforma oferuje zaawansowane możliwości zarządzania produktami, śledzenie stanów magazynowych w czasie rzeczywistym oraz płynną integrację z wieloma bramkami płatności.',
+          'Zbudowana z myślą o skalowalności, Saffron obsługuje duże wolumeny ruchu, zachowując wyjątkową wydajność i doświadczenie użytkownika.'
+        ],
+        stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
+        testimonial: {
+          quote: 'Saffron zrewolucjonizował nasz biznes online. Platforma jest nie tylko piękna, ale także niezwykle wydajna w zarządzaniu.',
+          author: 'Michael Anderson',
+          role: 'CEO, StyleHub'
+        },
+        gallery: [
+          'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+        ]
       }
     },
     services: {
@@ -515,7 +563,7 @@ export const translations = {
       }
     },
     footer: {
-      description: 'Vibly to kreatywna agencja technologiczna specjalizująca się w wysokiej jakości doświadczeniach cyfrowych dla postępowych firm i marek.',
+      description: 'Vibbly to kreatywna agencja technologiczna specjalizująca się w wysokiej jakości doświadczeniach cyfrowych dla postępowych firm i marek.',
       quickLinks: {
         title: 'Szybkie Linki',
         links: [

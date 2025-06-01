@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
               <div className="space-y-4">
                 <div>
                   <p className="text-gray-400 text-sm mb-1">{t.contact.info.email}</p>
-                  <p className="text-violet-400">contact@vibly.com</p>
+                  <p className="text-violet-400">contact@vibbly.com</p>
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm mb-1">{t.contact.info.phone}</p>

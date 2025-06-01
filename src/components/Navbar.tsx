@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center text-white font-bold text-xl mr-3">
             V
           </div>
-          <span className="text-white text-xl font-bold">Vibly</span>
+          <span className="text-white text-xl font-bold">Vibbly</span>
         </Link>
 
         {/* Desktop navigation */}

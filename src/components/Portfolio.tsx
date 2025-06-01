@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { translations } from '../utils/translations';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { getPortfolioProjects } from '../data/projects';
 
 interface Project {
   id: string;
@@ -15,39 +15,7 @@ interface Project {
 
 const Portfolio: React.FC = () => {
   const { language } = useLanguage();
-  const t = translations[language];
-  
-  const projects: Project[] = [
-    {
-      id: 'fintech-dashboard',
-      title: t.portfolio.project1.title,
-      description: t.portfolio.project1.description,
-      category: t.portfolio.project1.category,
-      image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      id: 'ecommerce-platform',
-      title: t.portfolio.project2.title,
-      description: t.portfolio.project2.description,
-      category: t.portfolio.project2.category,
-      image: "https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      id: 'healthcare-portal',
-      title: t.portfolio.project3.title,
-      description: t.portfolio.project3.description,
-      category: t.portfolio.project3.category,
-      image: "https://images.pexels.com/photos/2882507/pexels-photo-2882507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    },
-    {
-      id: 'travel-platform',
-      title: t.portfolio.project4.title,
-      description: t.portfolio.project4.description,
-      category: t.portfolio.project4.category,
-      image: "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-    }
-  ];
-
+  const projects = getPortfolioProjects(language as 'en' | 'pl');
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const filters = ['all', ...new Set(projects.map(project => project.category))];
   
@@ -69,10 +37,12 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-300 text-transparent bg-clip-text">
-            {t.portfolio.title}
+            {language === 'en' ? 'Our Work' : 'Nasze Prace'}
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            {t.portfolio.subtitle}
+            {language === 'en' 
+              ? 'Explore our latest projects and see how we\'ve helped brands transform their digital presence.'
+              : 'Odkryj nasze najnowsze projekty i zobacz, jak pomogliśmy markom przekształcić ich obecność cyfrową.'}
           </p>
           
           <div className="flex flex-wrap justify-center gap-2 mt-10">
@@ -124,7 +94,7 @@ const Portfolio: React.FC = () => {
                   to={`/portfolio/${project.id}`}
                   className="inline-flex items-center text-violet-400 hover:text-violet-300 transition-colors"
                 >
-                  {t.portfolio.viewProject} <ExternalLink className="ml-1 w-4 h-4" />
+                  {language === 'en' ? 'View Project' : 'Zobacz Projekt'} <ExternalLink className="ml-1 w-4 h-4" />
                 </Link>
               </div>
             </motion.div>

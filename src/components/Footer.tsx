@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center text-white font-bold text-xl mr-3">
                 V
               </div>
-              <span className="text-white text-xl font-bold">Vibly</span>
+              <span className="text-white text-xl font-bold">Vibbly</span>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               {t.footer.description}
@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {currentYear} Vibly. {t.footer.rights}
+            © {currentYear} Vibbly. {t.footer.rights}
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300">

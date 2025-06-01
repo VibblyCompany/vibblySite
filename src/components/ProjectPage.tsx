@@ -1,55 +1,26 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, Clock, Briefcase } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, Briefcase, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import { translations } from '../utils/translations';
 import { motion } from 'framer-motion';
 import PageSpeedIndicator from './PageSpeedIndicator';
 import ClientBenefits from './ClientBenefits';
+import { getProjectPageData } from '../data/projects';
 
 const ProjectPage: React.FC = () => {
   const { id } = useParams();
   const { language } = useLanguage();
-  const t = translations[language];
-  
-  const getProjectData = () => {
-    const projects = [
-      {
-        id: 'fintech-dashboard',
-        title: t.portfolio.project1.title,
-        description: t.portfolio.project1.description,
-        category: t.portfolio.project1.category,
-        image: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        fullDescription: t.portfolio.project1.fullDescription,
-        stack: t.portfolio.project1.stack,
-        testimonial: t.portfolio.project1.testimonial,
-        gallery: t.portfolio.project1.gallery,
-        duration: "12 weeks",
-        year: "2024",
-        projectType: "Web Application",
-        pageSpeedScores: [
-          { category: "Performance", score: 98, description: "Measures how fast the page loads and becomes interactive" },
-          { category: "Accessibility", score: 100, description: "Ensures content is accessible to all users" },
-          { category: "Best Practices", score: 95, description: "Follows modern web development best practices" },
-          { category: "SEO", score: 100, description: "Optimized for search engine visibility" }
-        ],
-        pageSpeedUrl: "https://pagespeed.web.dev/"
-      },
-      // ... other projects with similar data structure
-    ];
-    
-    return projects.find(project => project.id === id);
-  };
-
-  const project = getProjectData();
+  const project = id ? getProjectPageData(id, language as 'en' | 'pl') : null;
 
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-3xl font-bold mb-4">{t.portfolio.projectNotFound}</h1>
+          <h1 className="text-3xl font-bold mb-4">
+            {language === 'en' ? 'Project Not Found' : 'Nie Znaleziono Projektu'}
+          </h1>
           <Link to="/" className="text-violet-400 hover:text-violet-300 transition-colors">
-            {t.portfolio.backToHome}
+            {language === 'en' ? 'Back to Home' : 'Powrót do Strony Głównej'}
           </Link>
         </div>
       </div>
@@ -109,22 +80,29 @@ const ProjectPage: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
             >
+              <Briefcase className="w-5 h-5 mr-2 text-violet-400" />
+              <span>{language === 'en' ? 'Client' : 'Klient'}: {project.client}</span>
+            </motion.div>
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
+            >
               <Clock className="w-5 h-5 mr-2 text-violet-400" />
-              <span>Duration: {project.duration}</span>
+              <span>{language === 'en' ? 'Duration' : 'Czas trwania'}: {project.duration}</span>
             </motion.div>
             <motion.div 
               whileHover={{ scale: 1.05 }}
               className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
             >
               <Briefcase className="w-5 h-5 mr-2 text-violet-400" />
-              <span>Type: {project.projectType}</span>
+              <span>{language === 'en' ? 'Type' : 'Typ'}: {project.projectType}</span>
             </motion.div>
             <motion.div 
               whileHover={{ scale: 1.05 }}
               className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
             >
               <Calendar className="w-5 h-5 mr-2 text-violet-400" />
-              <span>Year: {project.year}</span>
+              <span>{language === 'en' ? 'Year' : 'Rok'}: {project.year}</span>
             </motion.div>
           </div>
         </motion.div>
@@ -137,7 +115,7 @@ const ProjectPage: React.FC = () => {
           className="inline-flex items-center text-gray-400 hover:text-white transition-colors group"
         >
           <ArrowLeft className="w-5 h-5 mr-2 transform group-hover:-translate-x-1 transition-transform duration-300" />
-          {t.portfolio.backToPortfolio}
+          {language === 'en' ? 'Back to Portfolio' : 'Powrót do Portfolio'}
         </Link>
       </div>
 
@@ -154,7 +132,7 @@ const ProjectPage: React.FC = () => {
                 transition={{ duration: 0.6 }}
                 className="text-3xl font-bold mb-6 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
               >
-                {t.portfolio.overview}
+                {language === 'en' ? 'Project Overview' : 'Przegląd Projektu'}
               </motion.h2>
               <div className="text-gray-300 space-y-4">
                 {project.fullDescription?.map((paragraph, index) => (
@@ -197,16 +175,20 @@ const ProjectPage: React.FC = () => {
               className="bg-gradient-to-br from-gray-900/80 via-gray-900/90 to-violet-900/20 rounded-3xl p-8 mb-8 border border-violet-500/10 shadow-2xl shadow-violet-900/20 backdrop-blur-2xl"
             >
               <h3 className="text-xl font-bold mb-6 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text">
-                {t.portfolio.projectDetails}
+                {language === 'en' ? 'Project Details' : 'Szczegóły Projektu'}
               </h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-gray-400 text-sm mb-1">{t.portfolio.category}</p>
+                  <p className="text-gray-400 text-sm mb-1">
+                    {language === 'en' ? 'Category' : 'Kategoria'}
+                  </p>
                   <p className="text-white">{project.category}</p>
                 </div>
                 {project.stack && (
                   <div>
-                    <p className="text-gray-400 text-sm mb-1">{t.portfolio.techStack}</p>
+                    <p className="text-gray-400 text-sm mb-1">
+                      {language === 'en' ? 'Technology Stack' : 'Technologie'}
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {project.stack.map((tech, index) => (
                         <motion.span
@@ -256,6 +238,30 @@ const ProjectPage: React.FC = () => {
         {/* Client Benefits - Full Width */}
         <ClientBenefits />
 
+        {/* Visit Project Button */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 flex justify-center"
+        >
+          <motion.a
+            href={project.projectUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 ease-out bg-gradient-to-r from-violet-600 to-violet-800 rounded-2xl shadow-lg hover:shadow-violet-500/25 hover:scale-105"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-violet-600 to-violet-800 rounded-2xl blur-md group-hover:blur-xl transition-all duration-300"></span>
+            <span className="relative flex items-center gap-2">
+              {language === 'en' ? 'Visit Project' : 'Odwiedź Projekt'}
+              <ExternalLink className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </motion.a>
+        </motion.div>
+
         {/* Gallery - Full Width */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -265,7 +271,7 @@ const ProjectPage: React.FC = () => {
           className="mt-16"
         >
           <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text">
-            {t.portfolio.gallery}
+            {language === 'en' ? 'Project Gallery' : 'Galeria Projektu'}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {project.gallery.map((image, index) => (
