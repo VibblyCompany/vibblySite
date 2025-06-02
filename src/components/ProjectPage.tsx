@@ -167,6 +167,30 @@ const ProjectPage: React.FC = () => {
 
           {/* Sidebar */}
           <div>
+            {/* Quick Access Button */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-8"
+            >
+              <motion.a
+                href={projectData.projectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center w-full px-6 py-3 font-bold text-white transition-all duration-300 ease-out bg-gradient-to-r from-violet-600 to-violet-800 rounded-2xl shadow-lg hover:shadow-violet-500/25 hover:scale-105"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
+                <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-violet-600 to-violet-800 rounded-2xl blur-md group-hover:blur-xl transition-all duration-300"></span>
+                <span className="relative flex items-center justify-center gap-2">
+                  {language === 'en' ? 'Visit Project' : 'Odwiedź Projekt'}
+                  <ExternalLink className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
+                </span>
+              </motion.a>
+            </motion.div>
+
             {/* Project Details */}
             <motion.div 
               initial={{ opacity: 0, x: 20 }}
