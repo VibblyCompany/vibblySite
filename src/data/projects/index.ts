@@ -1,11 +1,13 @@
 import { Project } from './types';
 import { saffronThyme } from './saffron-thyme';
 import { safetripvax } from './safetripvax';
+import { bilinq } from './bilinq';
 
 // Export all projects
 export const projects: Project[] = [
   saffronThyme,
-  safetripvax
+  safetripvax,
+  bilinq
 ];
 
 // Helper functions
