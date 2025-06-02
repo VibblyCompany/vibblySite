@@ -33,12 +33,15 @@ export const getProjectPageData = (projectId: string, language: 'en' | 'pl') => 
     category: project.translations[language].category,
     image: project.projectPage.image,
     fullDescription: project.translations[language].fullDescription,
-    stack: project.translations[language].stack,
+    stack: project.stack,
     testimonial: project.translations[language].testimonial,
+    clientBenefits: project.translations[language].clientBenefits,
     gallery: project.projectPage.gallery,
     duration: project.projectPage.duration,
     year: project.projectPage.year,
     projectType: project.projectPage.projectType,
+    client: project.projectPage.client,
+    projectUrl: project.projectPage.projectUrl,
     pageSpeedScores: project.projectPage.pageSpeedScores,
     pageSpeedUrl: project.projectPage.pageSpeedUrl
   };

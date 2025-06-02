@@ -25,6 +25,42 @@ export const saffronThyme: Project = {
           quote: 'The new website has significantly improved our online presence and made it much easier for customers to discover our restaurant. The multilingual support has been particularly valuable for our international clientele.',
           author: 'Restaurant Owner',
           role: 'Owner, Saffron & Thyme Restaurant'
+        },
+        clientBenefits: {
+          title: 'Restaurant Benefits',
+          subtitle: 'How our website solution helps Saffron & Thyme Restaurant grow',
+          benefits: [
+            {
+              icon: 'Search',
+              title: 'Enhanced Online Visibility',
+              description: 'Improved search engine rankings and social media presence help attract more customers to the restaurant.'
+            },
+            {
+              icon: 'Users',
+              title: 'Streamlined Reservations',
+              description: 'The intuitive booking system reduces no-shows and makes table management more efficient.'
+            },
+            {
+              icon: 'Smartphone',
+              title: 'Mobile-First Experience',
+              description: 'Perfect display and functionality on all devices, ensuring customers can easily browse the menu and make reservations on the go.'
+            },
+            {
+              icon: 'Edit',
+              title: 'Easy Menu Updates',
+              description: 'Simple content management system allows quick updates to menus, special offers, and events.'
+            },
+            {
+              icon: 'Shield',
+              title: 'Secure Booking System',
+              description: 'Protected reservation system ensures customer data safety and reliable booking management.'
+            },
+            {
+              icon: 'Layout',
+              title: 'Brand Consistency',
+              description: 'Modern, elegant design that perfectly reflects the restaurant\'s sophisticated atmosphere and culinary style.'
+            }
+          ]
         }
       },
       pl: {
@@ -40,6 +76,42 @@ export const saffronThyme: Project = {
           quote: 'Nowa strona znacząco poprawiła naszą obecność w internecie i znacznie ułatwiła klientom odkrycie naszej restauracji. Wsparcie dla wielu języków okazało się szczególnie cenne dla naszej międzynarodowej klienteli.',
           author: 'Właściciel Restauracji',
           role: 'Właściciel, Restauracja Saffron & Thyme'
+        },
+        clientBenefits: {
+          title: 'Korzyści dla Restauracji',
+          subtitle: 'Jak nasze rozwiązanie pomaga rozwijać Restaurację Saffron & Thyme',
+          benefits: [
+            {
+              icon: 'Search',
+              title: 'Lepsza Widoczność Online',
+              description: 'Ulepszone pozycje w wyszukiwarkach i obecność w mediach społecznościowych pomagają przyciągać więcej klientów do restauracji.'
+            },
+            {
+              icon: 'Users',
+              title: 'Usprawnione Rezerwacje',
+              description: 'Intuicyjny system rezerwacji zmniejsza liczbę nieobecności i usprawnia zarządzanie stolikami.'
+            },
+            {
+              icon: 'Smartphone',
+              title: 'Doświadczenie Mobile-First',
+              description: 'Doskonały wygląd i funkcjonalność na wszystkich urządzeniach, umożliwiając klientom łatwe przeglądanie menu i dokonywanie rezerwacji w podróży.'
+            },
+            {
+              icon: 'Edit',
+              title: 'Łatwe Aktualizacje Menu',
+              description: 'Prosty system zarządzania treścią pozwala na szybkie aktualizacje menu, ofert specjalnych i wydarzeń.'
+            },
+            {
+              icon: 'Shield',
+              title: 'Bezpieczny System Rezerwacji',
+              description: 'Chroniony system rezerwacji zapewnia bezpieczeństwo danych klientów i niezawodne zarządzanie rezerwacjami.'
+            },
+            {
+              icon: 'Layout',
+              title: 'Spójność Marki',
+              description: 'Nowoczesny, elegancki design, który idealnie odzwierciedla wyrafinowaną atmosferę i styl kulinarny restauracji.'
+            }
+          ]
         }
       }
     },

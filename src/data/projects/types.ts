@@ -13,6 +13,15 @@ export interface Project {
         author: string;
         role: string;
       };
+      clientBenefits: {
+        title: string;
+        subtitle: string;
+        benefits: Array<{
+          icon: string;
+          title: string;
+          description: string;
+        }>;
+      };
     };
     pl: {
       title: string;
@@ -23,6 +32,15 @@ export interface Project {
         quote: string;
         author: string;
         role: string;
+      };
+      clientBenefits: {
+        title: string;
+        subtitle: string;
+        benefits: Array<{
+          icon: string;
+          title: string;
+          description: string;
+        }>;
       };
     };
   };
@@ -39,11 +57,7 @@ export interface Project {
     year: string;
     projectType: string;
     projectUrl: string;
-    pageSpeedScores: {
-      category: string;
-      score: number;
-      description: string;
-    }[];
+    pageSpeedScores: PageSpeedScore[];
     pageSpeedUrl: string;
   };
 }
@@ -79,6 +93,38 @@ export const createPageSpeedScores = (scores: Record<PageSpeedScoreCategory, num
   }));
 };
 
+export interface ProjectPageData {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  image: string;
+  fullDescription: string[];
+  stack: string[];
+  testimonial: {
+    quote: string;
+    author: string;
+    role: string;
+  };
+  clientBenefits: {
+    title: string;
+    subtitle: string;
+    benefits: Array<{
+      icon: string;
+      title: string;
+      description: string;
+    }>;
+  };
+  gallery: string[];
+  duration: string;
+  year: string;
+  projectType: string;
+  client: string;
+  projectUrl: string;
+  pageSpeedScores: PageSpeedScore[];
+  pageSpeedUrl: string;
+}
+
 // Helper functions to get project data for different views
 export const getPortfolioProjects = (projects: Project[], language: 'en' | 'pl') => {
   return projects.map(project => ({
@@ -90,7 +136,7 @@ export const getPortfolioProjects = (projects: Project[], language: 'en' | 'pl')
   }));
 };
 
-export const getProjectPageData = (projects: Project[], id: string, language: 'en' | 'pl') => {
+export const getProjectPageData = (projects: Project[], id: string, language: 'en' | 'pl'): ProjectPageData | null => {
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
@@ -103,10 +149,13 @@ export const getProjectPageData = (projects: Project[], id: string, language: 'e
     fullDescription: project.translations[language].fullDescription,
     stack: project.stack,
     testimonial: project.translations[language].testimonial,
+    clientBenefits: project.translations[language].clientBenefits,
     gallery: project.projectPage.gallery,
     duration: project.projectPage.duration,
     year: project.projectPage.year,
     projectType: project.projectPage.projectType,
+    client: project.projectPage.client,
+    projectUrl: project.projectPage.projectUrl,
     pageSpeedScores: project.projectPage.pageSpeedScores,
     pageSpeedUrl: project.projectPage.pageSpeedUrl
   };
