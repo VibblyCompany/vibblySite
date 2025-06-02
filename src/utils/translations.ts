@@ -2,7 +2,7 @@ export const translations = {
   en: {
     nav: {
       home: 'Home',
-      about: 'About',
+      about: 'About Us',
       portfolio: 'Portfolio',
       services: 'Services',
       contact: 'Contact',
@@ -11,241 +11,77 @@ export const translations = {
     hero: {
       headline1: 'We Create Digital',
       headline2: 'Experiences That Matter',
-      subheadline: 'Elevating brands through cutting-edge web applications and innovative digital solutions that transform ideas into reality.',
-      cta: 'Let\'s Build Together'
+      subheadline: 'Modern websites – fast, affordable, and full of style. Build a strong online presence with a team you can count on.',
+      cta: "Let's Build Together"
     },
     about: {
-      title: 'About Vibbly',
-      subtitle: 'We\'re a team of passionate digital creators building experiences that stand out in today\'s crowded digital landscape.',
+      title: 'Who Are We?',
+      subtitle: 'We’re a team of creative developers, designers, and makers. We care about making every website not just look good – but feel right to our clients.',
       feature1: {
-        title: 'Creative Vision',
-        description: 'We approach each project with fresh eyes and innovative thinking, pushing boundaries to create unique digital experiences.'
+        title: 'Fast Turnaround',
+        description: 'Your website can be ready in just a few days. We work quickly and efficiently — no delays, no fluff. Need a site “right now”? With us, it’s possible.'
       },
       feature2: {
-        title: 'Technical Excellence',
-        description: 'Our development team combines deep technical knowledge with a commitment to clean, efficient, and maintainable code.'
+        title: 'Fair Pricing',
+        description: 'Professional quality without overpaying. You don’t need a big budget to get a great site. We offer honest pricing and real value for every penny.'
       },
       feature3: {
-        title: 'Design Precision',
-        description: 'Every pixel matters. We obsess over design details to create interfaces that are both beautiful and functional.'
+        title: 'Stylish & Thoughtful',
+        description: 'Modern design that grabs attention. We build pixel-perfect websites that look stunning, inspire trust, and support your brand’s identity.'
       },
       mission: {
         title: 'Our Mission',
-        description1: 'At Vibbly, we believe that technology should enhance human experiences, not complicate them.',
-        description2: 'We\'re committed to creating digital solutions that are intuitive, accessible, and provide real value to users and businesses alike.'
+        description1: 'At Vibbly, we believe every business deserves a great website – without hassle, delays, or overspending.',
+        description2: 'Our mission is to deliver beautiful and effective websites fast, efficiently, and at a reasonable cost.'
       },
-      quote: 'We don\'t just build websites and applications. We craft digital experiences that tell stories, solve problems, and create meaningful connections.',
-      quoteAuthor: 'Alex Kowalski',
+      quote: 'We don’t just build websites and apps. We create digital experiences that tell stories, solve problems, and spark meaningful connections.',
+      quoteAuthor: 'Aleksander Kowalski',
       quoteRole: 'Founder & CEO'
     },
     portfolio: {
-      title: 'Our Work',
-      subtitle: 'Explore our latest projects and see how we\'ve helped brands transform their digital presence.',
+      title: 'Our Projects',
+      subtitle: 'Take a look at what we’ve already built – and imagine what we can do for you.',
       viewProject: 'View Project',
-      viewAll: 'View All Projects',
-      backToPortfolio: 'Back to Portfolio',
-      backToHome: 'Back to Home',
-      projectNotFound: 'Project Not Found',
-      overview: 'Project Overview',
-      gallery: 'Project Gallery',
-      projectDetails: 'Project Details',
-      category: 'Category',
-      techStack: 'Technology Stack',
-      clientBenefits: {
-        title: 'Client Benefits',
-        subtitle: 'Key advantages that come with our web development services',
-        benefits: [
-          {
-            title: 'Better Google Visibility',
-            description: 'Enhanced SEO optimization for improved search engine rankings',
-            icon: 'Search'
-          },
-          {
-            title: 'More Customer Inquiries',
-            description: 'Increased lead generation through optimized conversion paths',
-            icon: 'Users'
-          },
-          {
-            title: 'Fast Mobile Performance',
-            description: 'Lightning-fast loading times across all devices',
-            icon: 'Smartphone'
-          },
-          {
-            title: 'Easy Site Updates',
-            description: 'User-friendly content management system for quick updates',
-            icon: 'Edit'
-          },
-          {
-            title: 'Secure SSL Connection',
-            description: 'Protected data transmission with industry-standard security',
-            icon: 'Shield'
-          },
-          {
-            title: 'Professional Design',
-            description: 'Modern, responsive design that builds trust and credibility',
-            icon: 'Layout'
-          }
-        ]
-      },
-      project1: {
-        title: 'Fintech Dashboard Redesign',
-        description: 'A complete UX/UI overhaul for a financial technology platform, focusing on data visualization and user efficiency.',
-        category: 'web app',
-        fullDescription: [
-          'The Fintech Dashboard Redesign project was a comprehensive overhaul of a legacy financial platform, transforming it into a modern, user-centric interface that prioritizes data clarity and operational efficiency.',
-          'Our team conducted extensive user research and workflow analysis to identify pain points and opportunities for improvement. The result is a streamlined dashboard that reduces cognitive load while providing powerful financial insights at a glance.',
-          'The new design implements real-time data visualization, customizable widgets, and an intuitive navigation system that has significantly reduced the learning curve for new users while enhancing productivity for power users.'
-        ],
-        stack: ['React', 'TypeScript', 'D3.js', 'Node.js', 'PostgreSQL'],
-        testimonial: {
-          quote: 'The redesigned dashboard has transformed how our team interacts with financial data. What used to take multiple clicks and screens is now accessible with remarkable ease.',
-          author: 'Sarah Chen',
-          role: 'Head of Product, FinanceFlow'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370727/pexels-photo-8370727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370735/pexels-photo-8370735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370742/pexels-photo-8370742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project2: {
-        title: 'Safe trip vax',
-        description: 'Takie tam ze szcepionkami.',
-        category: 'e-commerce',
-        fullDescription: [
-          'This custom e-commerce platform was built from the ground up to provide a unique shopping experience that combines powerful functionality with elegant design.',
-          'The platform features an advanced product recommendation engine that learns from user behavior to provide personalized suggestions, while the intelligent search system makes finding products intuitive and efficient.',
-          'We implemented a streamlined checkout process that reduced cart abandonment by 35% and integrated multiple payment gateways to provide flexibility for international customers.'
-        ],
-        stack: ['Next.js', 'Redux', 'Stripe', 'MongoDB', 'Elasticsearch'],
-        testimonial: {
-          quote: 'Our conversion rates have increased significantly since launching the new platform. The user experience is exactly what we envisioned.',
-          author: 'Michael Roberts',
-          role: 'CEO, StyleHub'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project3: {
-        title: 'Healthcare Provider Portal',
-        description: 'Secure patient management system with telehealth capabilities and integrated medical records.',
-        category: 'healthcare',
-        fullDescription: [
-          'The Healthcare Provider Portal is a comprehensive solution that modernizes patient care management while maintaining the highest standards of security and compliance.',
-          'We developed a HIPAA-compliant system that seamlessly integrates electronic health records, appointment scheduling, and secure video consultations into a unified platform.',
-          'The portal includes advanced features such as automated appointment reminders, prescription management, and secure messaging between healthcare providers and patients.'
-        ],
-        stack: ['Angular', 'Node.js', 'PostgreSQL', 'WebRTC', 'Docker'],
-        testimonial: {
-          quote: 'This portal has revolutionized how we deliver care. The integration of telehe alth has been particularly impactful for our rural patients.',
-          author: 'Dr. Emily Martinez',
-          role: 'Medical Director, HealthFirst'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579544/pexels-photo-7579544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579551/pexels-photo-7579551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579570/pexels-photo-7579570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579585/pexels-photo-7579585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579598/pexels-photo-7579598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project4: {
-        title: 'Travel Experience Platform',
-        description: 'Interactive travel planning application with personalized recommendations and immersive content.',
-        category: 'travel',
-        fullDescription: [
-          'The Travel Experience Platform redefines how travelers plan and book their adventures through an immersive and personalized digital experience.',
-          'Our solution combines advanced AI-driven recommendations with user-generated content to create a rich, community-driven platform that inspires and facilitates travel planning.',
-          'The platform features interactive maps, real-time availability updates, and seamless integration with local experience providers to deliver a comprehensive travel planning solution.'
-        ],
-        stack: ['React', 'GraphQL', 'AWS', 'Redis', 'Python'],
-        testimonial: {
-          quote: 'The platform has transformed how our customers discover and book travel experiences. The personalization engine is particularly impressive.',
-          author: 'Lisa Thompson',
-          role: 'Product Manager, TravelWise'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/7412069/pexels-photo-7412069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412089/pexels-photo-7412089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412081/pexels-photo-7412081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412075/pexels-photo-7412075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412065/pexels-photo-7412065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project5: {
-        title: 'Saffron E-commerce Platform',
-        description: 'Modern e-commerce solution with advanced product management and seamless payment integration.',
-        category: 'e-commerce',
-        fullDescription: [
-          'Saffron is a cutting-edge e-commerce platform designed to provide businesses with a powerful yet intuitive solution for online retail.',
-          'The platform features advanced product management capabilities, real-time inventory tracking, and seamless integration with multiple payment gateways.',
-          'Built with scalability in mind, Saffron handles high traffic volumes while maintaining exceptional performance and user experience.'
-        ],
-        stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
-        testimonial: {
-          quote: 'Saffron has transformed our online business. The platform is not only beautiful but also incredibly efficient to manage.',
-          author: 'Michael Anderson',
-          role: 'CEO, StyleHub'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      }
+      backToPortfolio: 'Back to Portfolio'
     },
     services: {
       title: 'Our Services',
-      subtitle: 'We offer comprehensive digital solutions tailored to your unique business needs.',
+      subtitle: 'From idea to live website – we support you every step of the way.',
       cta: 'Discuss Your Project',
       service1: {
-        title: 'Custom Web Development',
-        description: 'We build scalable, high-performance web applications using cutting-edge technologies.',
+        title: 'From Vision to Plan',
+        description: 'We’ll help translate your vision into a concrete action plan. Together, we’ll define goals, site structure, and key features.',
         features: [
-          'Progressive Web Applications',
-          'Complex Web Portals',
-          'Custom CMS Solutions',
-          'API Development & Integration'
-        ]
-      },
-      service2: {
-        title: 'UI/UX Design',
-        description: 'We create intuitive, engaging user experiences that keep your customers coming back.',
-        features: [
-          'User Research & Testing',
-          'Interface Design',
-          'Interaction Design',
-          'Design Systems'
+          'Site Planning & Consultation',
+          'Goal and Scope Definition',
+          'Structure & Content Mapping',
+          'Creative and Strategic Support'
         ]
       },
       service3: {
-        title: 'Digital Strategy',
-        description: 'We help you define your digital roadmap and identify the best technologies for your goals.',
+        title: 'UI/UX Design',
+        description: 'We create attractive, modern, and intuitive interfaces that draw attention and deliver great user experiences.',
         features: [
-          'Technical Consulting',
-          'Digital Transformation',
-          'Technology Stack Selection',
-          'Performance Optimization'
+          'Modern Visual Design',
+          'Responsive & Mobile-Ready',
+          'Intuitive Navigation & Layout',
+          'Consistent Brand Identity'
+        ]
+      },
+      service2: {
+        title: 'Development & SEO',
+        description: 'We handle the full implementation — from hosting setup to SEO optimization and smooth performance across all functions.',
+        features: [
+          'Functional Website Logic',
+          'Publishing & Hosting',
+          'SEO Optimization',
+          'Speed & Security Focus'
         ]
       }
-    },
+    },    
     contact: {
-      title: 'Get in Touch',
-      subtitle: 'Ready to start your project? Reach out to discuss how we can help bring your vision to life.',
+      title: 'Contact Us',
+      subtitle: 'Ready to start your project? Reach out and let’s discuss how we can bring your vision to life.',
       form: {
         name: 'Your Name',
         email: 'Your Email',
@@ -253,22 +89,22 @@ export const translations = {
         submit: 'Send Message'
       },
       schedule: {
-        title: 'Prefer a meeting?',
-        button: 'Schedule a Call'
+        title: 'Prefer a Call?',
+        button: 'Schedule a Meeting'
       },
       info: {
-        title: 'Contact Information',
+        title: 'Contact Info',
         email: 'Email',
         phone: 'Phone',
         location: 'Location'
       },
       success: {
         title: 'Message Sent!',
-        message: 'Thank you for reaching out. We\'ll get back to you shortly.'
+        message: 'Thank you for reaching out. We’ll get back to you shortly.'
       }
     },
     footer: {
-      description: 'Vibbly is a creative tech agency specializing in premium digital experiences for forward-thinking companies and brands.',
+      description: 'Vibbly is a creative tech agency focused on high-quality digital experiences for modern brands and businesses.',
       quickLinks: {
         title: 'Quick Links',
         links: [
@@ -285,7 +121,7 @@ export const translations = {
         links: [
           'Terms of Service',
           'Privacy Policy',
-          'Cookies Policy',
+          'Cookie Policy',
           'GDPR Compliance'
         ]
       },
@@ -306,238 +142,74 @@ export const translations = {
     hero: {
       headline1: 'Tworzymy Cyfrowe',
       headline2: 'Doświadczenia, Które Mają Znaczenie',
-      subheadline: 'Podnosimy wartość marek poprzez nowoczesne aplikacje internetowe i innowacyjne rozwiązania cyfrowe, które przekształcają pomysły w rzeczywistość.',
+      subheadline: 'Nowoczesne strony internetowe – szybko, przystępnie i z klasą. Zbuduj silną obecność online z zespołem, na którym możesz polegać.',
       cta: 'Zbudujmy Coś Razem'
     },
     about: {
-      title: 'O Vibbly',
-      subtitle: 'Jesteśmy zespołem pasjonatów tworzących cyfrowe doświadczenia, które wyróżniają się w dzisiejszym zatłoczonym krajobrazie cyfrowym.',
+      title: 'Kim jesteśmy?',
+      subtitle: 'Jesteśmy zespołem kreatywnych twórców, projektantów i programistów. Zależy nam, by każda strona cieszyła nie tylko oko, ale i klienta.',
       feature1: {
-        title: 'Kreatywna Wizja',
-        description: 'Podchodzimy do każdego projektu ze świeżym spojrzeniem i innowacyjnym myśleniem, przesuwając granice, aby tworzyć unikalne doświadczenia cyfrowe.'
+        title: 'Błyskawicznie',
+        description: 'Twoja strona gotowa nawet w kilka dni. Działamy sprawnie i konkretnie — bez zbędnego przeciągania. Potrzebujesz strony "na już"? U nas to możliwe.'
       },
       feature2: {
-        title: 'Doskonałość Techniczna',
-        description: 'Nasz zespół programistów łączy głęboką wiedzę techniczną z zaangażowaniem w czysty, wydajny i łatwy w utrzymaniu kod.'
+        title: 'W dobrej cenie',
+        description: 'Profesjonalna jakość bez przepłacania. Nie musisz wydawać fortuny, żeby mieć porządną stronę. Oferujemy uczciwe ceny i realną wartość za każdą złotówkę.'
       },
       feature3: {
-        title: 'Precyzja Projektowania',
-        description: 'Każdy piksel ma znaczenie. Obsesyjnie dbamy o szczegóły projektowe, aby tworzyć interfejsy, które są zarówno piękne, jak i funkcjonalne.'
+        title: 'Z pomysłem i stylem',
+        description: 'Nowoczesny design, który przyciąga klientów. Tworzymy strony z dbałością o każdy piksel, które nie tylko wyglądają świetnie, ale też działają na korzyść Twojej marki i wzbudzają zaufanie.'
       },
       mission: {
         title: 'Nasza Misja',
-        description1: 'W Vibbly wierzymy, że technologia powinna wzbogacać ludzkie doświadczenia, a nie je komplikować.',
-        description2: 'Jesteśmy zaangażowani w tworzenie rozwiązań cyfrowych, które są intuicyjne, dostępne i zapewniają rzeczywistą wartość zarówno użytkownikom, jak i firmom.'
+        description1: 'W Vibbly wierzymy, że każda firma zasługuje na świetną stronę internetową – bez komplikacji, bez przeciągania, bez przepłacania.',
+        description2: 'Nasza misja to dostarczać efektowne i skuteczne strony www szybko, sprawnie i w rozsądnej cenie.'
       },
       quote: 'Nie tylko budujemy strony internetowe i aplikacje. Tworzymy cyfrowe doświadczenia, które opowiadają historie, rozwiązują problemy i tworzą znaczące połączenia.',
       quoteAuthor: 'Aleksander Kowalski',
       quoteRole: 'Założyciel i CEO'
     },
     portfolio: {
-      title: 'Nasze Prace',
-      subtitle: 'Odkryj nasze najnowsze projekty i zobacz, jak pomogliśmy markom przekształcić ich obecność cyfrową.',
+      title: 'Nasze Projekty',
+      subtitle: 'Zobacz, co już zbudowaliśmy – i pomyśl, co możemy zrobić dla Ciebie.',
       viewProject: 'Zobacz Projekt',
-      viewAll: 'Zobacz Wszystkie Projekty',
-      backToPortfolio: 'Powrót do Portfolio',
-      backToHome: 'Powrót do Strony Głównej',
-      projectNotFound: 'Nie Znaleziono Projektu',
-      overview: 'Przegląd Projektu',
-      gallery: 'Galeria Projektu',
-      projectDetails: 'Szczegóły Projektu',
-      category: 'Kategoria',
-      techStack: 'Technologie',
-      clientBenefits: {
-        title: 'Korzyści dla Klienta',
-        subtitle: 'Kluczowe zalety naszych usług tworzenia stron internetowych',
-        benefits: [
-          {
-            title: 'Lepsza Widoczność w Google',
-            description: 'Zaawansowana optymalizacja SEO dla lepszych pozycji w wyszukiwarkach',
-            icon: 'Search'
-          },
-          {
-            title: 'Więcej Zapytań Klientów',
-            description: 'Zwiększona generacja leadów dzięki zoptymalizowanym ścieżkom konwersji',
-            icon: 'Users'
-          },
-          {
-            title: 'Szybka Wydajność Mobilna',
-            description: 'Błyskawiczny czas ładowania na wszystkich urządzeniach',
-            icon: 'Smartphone'
-          },
-          {
-            title: 'Łatwe Aktualizacje',
-            description: 'Przyjazny system zarządzania treścią do szybkich aktualizacji',
-            icon: 'Edit'
-          },
-          {
-            title: 'Bezpieczne Połączenie SSL',
-            description: 'Chroniona transmisja danych z bezpieczeństwem na poziomie branżowym',
-            icon: 'Shield'
-          },
-          {
-            title: 'Profesjonalny Design',
-            description: 'Nowoczesny, responsywny design budujący zaufanie i wiarygodność',
-            icon: 'Layout'
-          }
-        ]
-      },
-      project1: {
-        title: 'Redesign Panelu Fintech',
-        description: 'Kompletna przebudowa UX/UI dla platformy technologii finansowej, skupiająca się na wizualizacji danych i wydajności użytkownika.',
-        category: 'aplikacja webowa',
-        fullDescription: [
-          'Projekt Redesign Panelu Fintech był kompleksową modernizacją przestarzałej platformy finansowej, przekształcając ją w nowoczesny, zorientowany na użytkownika interfejs, który priorytetowo traktuje przejrzystość danych i efektywność operacyjną.',
-          'Nasz zespół przeprowadził szeroko zakrojone badania użytkowników i analizę przepływu pracy, aby zidentyfikować problemy i możliwości ulepszeń. Rezultatem jest uproszczony dashboard, który zmniejsza obciążenie poznawcze, jednocześnie zapewniając potężne narzędzia do analizy finansowej.',
-          'Nowy design implementuje wizualizację danych w czasie rzeczywistym, konfigurowalne widżety i intuicyjny system nawigacji, który znacząco zmniejszył krzywą uczenia się dla nowych użytkowników, jednocześnie zwiększając produktywność zaawansowanych użytkowników.'
-        ],
-        stack: ['React', 'TypeScript', 'D3.js', 'Node.js', 'PostgreSQL'],
-        testimonial: {
-          quote: 'Przeprojektowany dashboard zmienił sposób, w jaki nasz zespół pracuje z danymi finansowymi. To, co kiedyś wymagało wielu kliknięć i ekranów, jest teraz dostępne z niezwykłą łatwością.',
-          author: 'Sara Chen',
-          role: 'Kierownik Produktu, FinanceFlow'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7567443/pexels-photo-7567443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370727/pexels-photo-8370727.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370735/pexels-photo-8370735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/8370742/pexels-photo-8370742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project2: {
-        title: 'Platforma E-commerce',
-        description: 'Niestandardowe rozwiązanie e-commerce z zaawansowanym filtrowaniem produktów, rekomendacjami i płynnym procesem zakupowym.',
-        category: 'e-commerce',
-        fullDescription: [
-          'Ta niestandardowa platforma e-commerce została zbudowana od podstaw, aby zapewnić wyjątkowe doświadczenie zakupowe, które łączy potężną funkcjonalność z eleganckim designem.',
-          'Platforma zawiera zaawansowany system rekomendacji produktów, który uczy się zachowań użytkowników, aby dostarczać spersonalizowane sugestie, podczas gdy inteligentny system wyszukiwania sprawia, że znajdowanie produktów jest intuicyjne i efektywne.',
-          'Wdrożyliśmy uproszczony proces zakupowy, który zmniejszył porzucanie koszyka o 35% i zintegrowaliśmy wiele bramek płatniczych, aby zapewnić elastyczność dla klientów międzynarodowych.'
-        ],
-        stack: ['Next.js', 'Redux', 'Stripe', 'MongoDB', 'Elasticsearch'],
-        testimonial: {
-          quote: 'Nasze wskaźniki konwersji znacząco wzrosły od czasu uruchomienia nowej platformy. Doświadczenie użytkownika jest dokładnie takie, jakie sobie wyobrażaliśmy.',
-          author: 'Michał Roberts',
-          role: 'CEO, StyleHub'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project3: {
-        title: 'Portal Opieki Zdrowotnej',
-        description: 'Bezpieczny system zarządzania pacjentami z funkcjami telemedycyny i zintegrowaną dokumentacją medyczną.',
-        category: 'zdrowie',
-        fullDescription: [
-          'Portal Opieki Zdrowotnej to kompleksowe rozwiązanie, które modernizuje zarządzanie opieką nad pacjentem, zachowując najwyższe standardy bezpieczeństwa i zgodności.',
-          'Opracowaliśmy system zgodny z HIPAA, który płynnie integruje elektroniczną dokumentację medyczną, planowanie wizyt i bezpieczne konsultacje wideo w jednej platformie.',
-          'Portal zawiera zaawansowane funkcje, takie jak automatyczne przypomnienia o wizytach, zarządzanie receptami i bezpieczna komunikacja między pracownikami służby zdrowia a pacjentami.'
-        ],
-        stack: ['Angular', 'Node.js', 'PostgreSQL', 'WebRTC', 'Docker'],
-        testimonial: {
-          quote: 'Ten portal zrewolucjonizował sposób, w jaki świadczymy opiekę. Integracja telemedycyny była szczególnie istotna dla naszych pacjentów z obszarów wiejskich.',
-          author: 'Dr Emily Martinez',
-          role: 'Dyrektor Medyczny, HealthFirst'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/7579831/pexels-photo-7579831.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579544/pexels-photo-7579544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579551/pexels-photo-7579551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579570/pexels-photo-7579570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579585/pexels-photo-7579585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7579598/pexels-photo-7579598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project4: {
-        title: 'Platforma Podróżnicza',
-        description: 'Interaktywna aplikacja do planowania podróży z personalizowanymi rekomendacjami i immersyjnymi treściami.',
-        category: 'podróże',
-        fullDescription: [
-          'Platforma Podróżnicza przedefiniowuje sposób, w jaki podróżnicy planują i rezerwują swoje przygody poprzez immersyjne i spersonalizowane doświadczenie cyfrowe.',
-          'Nasze rozwiązanie łączy zaawansowane rekomendacje oparte na AI z treściami generowanymi przez użytkowników, tworząc bogatą, napędzaną przez społeczność platformę, która inspiruje i ułatwia planowanie podróży.',
-          'Platforma oferuje interaktywne mapy, aktualizacje dostępności w czasie rzeczywistym i bezproblemową integrację z lokalnymi dostawcami usług, zapewniając kompleksowe rozwiązanie do planowania podróży.'
-        ],
-        stack: ['React', 'GraphQL', 'AWS', 'Redis', 'Python'],
-        testimonial: {
-          quote: 'Platforma zmieniła sposób, w jaki nasi klienci odkrywają i rezerwują doświadczenia podróżnicze. Silnik personalizacji jest szczególnie imponujący.',
-          author: 'Lisa Thompson',
-          role: 'Menedżer Produktu, TravelWise'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/7412069/pexels-photo-7412069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412095/pexels-photo-7412095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412089/pexels-photo-7412089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412081/pexels-photo-7412081.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412075/pexels-photo-7412075.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/7412065/pexels-photo-7412065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      },
-      project5: {
-        title: 'Platforma E-commerce Saffron',
-        description: 'Nowoczesne rozwiązanie e-commerce z zaawansowanym zarządzaniem produktami i płynną integracją płatności.',
-        category: 'e-commerce',
-        fullDescription: [
-          'Saffron to nowoczesna platforma e-commerce zaprojektowana, aby zapewnić firmom potężne, a jednocześnie intuicyjne rozwiązanie do sprzedaży online.',
-          'Platforma oferuje zaawansowane możliwości zarządzania produktami, śledzenie stanów magazynowych w czasie rzeczywistym oraz płynną integrację z wieloma bramkami płatności.',
-          'Zbudowana z myślą o skalowalności, Saffron obsługuje duże wolumeny ruchu, zachowując wyjątkową wydajność i doświadczenie użytkownika.'
-        ],
-        stack: ['Next.js', 'TypeScript', 'Node.js', 'MongoDB', 'Stripe'],
-        testimonial: {
-          quote: 'Saffron zrewolucjonizował nasz biznes online. Platforma jest nie tylko piękna, ale także niezwykle wydajna w zarządzaniu.',
-          author: 'Michael Anderson',
-          role: 'CEO, StyleHub'
-        },
-        gallery: [
-          'https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632397/pexels-photo-5632397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632378/pexels-photo-5632378.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632366/pexels-photo-5632366.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632358/pexels-photo-5632358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-          'https://images.pexels.com/photos/5632349/pexels-photo-5632349.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        ]
-      }
+      backToPortfolio: 'Powrót do Portfolio'
     },
     services: {
       title: 'Nasze Usługi',
-      subtitle: 'Oferujemy kompleksowe rozwiązania cyfrowe dostosowane do unikalnych potrzeb Twojego biznesu.',
+      subtitle: 'Od pomysłu po działającą stronę – oferujemy pełne wsparcie na każdym etapie.',
       cta: 'Omów Swój Projekt',
       service1: {
-        title: 'Niestandardowy Rozwój Web',
-        description: 'Budujemy skalowalne, wydajne aplikacje internetowe wykorzystując najnowocześniejsze technologie.',
+        title: 'Od Pomysłu do Projektu',
+        description: 'Pomożemy Ci przełożyć Twoją wizję na konkretny plan działania. Wspólnie określimy cele, strukturę strony i kluczowe funkcje.',
         features: [
-          'Progresywne Aplikacje Webowe',
-          'Złożone Portale Internetowe',
-          'Niestandardowe Rozwiązania CMS',
-          'Rozwój i Integracja API'
-        ]
-      },
-      service2: {
-        title: 'Projektowanie UI/UX',
-        description: 'Tworzymy intuicyjne, angażujące doświadczenia użytkownika, które sprawiają, że klienci wracają.',
-        features: [
-          'Badania i Testy Użytkowników',
-          'Projektowanie Interfejsu',
-          'Projektowanie Interakcji',
-          'Systemy Projektowe'
+          'Doradztwo i Planowanie Strony',
+          'Pomoc w Określeniu Celu i Zakresu',
+          'Tworzenie Struktury i Zawartości',
+          'Wsparcie Kreatywne i Strategiczne'
         ]
       },
       service3: {
-        title: 'Strategia Cyfrowa',
-        description: 'Pomagamy zdefiniować cyfrową mapę drogową i zidentyfikować najlepsze technologie dla Twoich celów.',
+        title: 'Projektowanie UI/UX',
+        description: 'Tworzymy atrakcyjne, nowoczesne i intuicyjne interfejsy, które przyciągają uwagę i budują pozytywne doświadczenie użytkownika.',
         features: [
-          'Doradztwo Techniczne',
-          'Transformacja Cyfrowa',
-          'Wybór Stosu Technologicznego',
-          'Optymalizacja Wydajności'
+          'Nowoczesne Projekty Graficzne',
+          'Responsywność i Mobilna Wersja',
+          'Intuicyjna Nawigacja i Struktura',
+          'Spójna Identyfikacja Wizualna'
+        ]
+      },
+      service2: {
+        title: 'Techniczne Wdrożenie i SEO',
+        description: 'Zajmujemy się pełnym wdrożeniem strony – od konfiguracji hostingu, przez optymalizację SEO, aż po płynne działanie każdej funkcji.',
+        features: [
+          'Funkcjonalność i Logika Strony',
+          'Publikacja i Hosting',
+          'Optymalizacja Pod Kątem SEO',
+          'Dbałość o Szybkość i Bezpieczeństwo'
         ]
       }
-    },
+    },    
     contact: {
       title: 'Skontaktuj się',
       subtitle: 'Gotowy, aby rozpocząć swój projekt? Skontaktuj się, aby omówić, jak możemy pomóc w realizacji Twojej wizji.',
@@ -587,6 +259,6 @@ export const translations = {
       rights: 'Wszelkie prawa zastrzeżone.',
       terms: 'Warunki Korzystania',
       privacy: 'Polityka Prywatności'
-    }
+    },
   }
 };

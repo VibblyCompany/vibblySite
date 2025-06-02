@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getPortfolioProjects } from '../data/projects';
+import { translations } from '../utils/translations';
 
 interface Project {
   id: string;
@@ -15,6 +16,7 @@ interface Project {
 
 const Portfolio: React.FC = () => {
   const { language } = useLanguage();
+  const t = translations[language].portfolio;
   const projects = getPortfolioProjects(language as 'en' | 'pl');
   const [activeFilter, setActiveFilter] = useState<string>('all');
   const filters = ['all', ...new Set(projects.map(project => project.category))];
@@ -37,12 +39,10 @@ const Portfolio: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-16">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-violet-400 to-fuchsia-300 text-transparent bg-clip-text">
-            {language === 'en' ? 'Our Work' : 'Nasze Prace'}
+            {t.title}
           </h2>
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            {language === 'en' 
-              ? 'Explore our latest projects and see how we\'ve helped brands transform their digital presence.'
-              : 'Odkryj nasze najnowsze projekty i zobacz, jak pomogliśmy markom przekształcić ich obecność cyfrową.'}
+            {t.subtitle}
           </p>
           
           <div className="flex flex-wrap justify-center gap-2 mt-10">
@@ -94,7 +94,7 @@ const Portfolio: React.FC = () => {
                   to={`/portfolio/${project.id}`}
                   className="inline-flex items-center text-violet-400 hover:text-violet-300 transition-colors"
                 >
-                  {language === 'en' ? 'View Project' : 'Zobacz Projekt'} <ExternalLink className="ml-1 w-4 h-4" />
+                  {t.viewProject} <ExternalLink className="ml-1 w-4 h-4" />
                 </Link>
               </div>
             </motion.div>
