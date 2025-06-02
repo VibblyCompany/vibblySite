@@ -119,7 +119,7 @@ export const saffronThyme: Project = {
       image: mainPageImage // You'll need to add this image
     },
     projectPage: {
-      image: coverImage, // You'll need to add this image
+      image: coverImage,
       gallery: [
         '/projects/saffron-thyme/gallery-1.jpg',
         '/projects/saffron-thyme/gallery-2.jpg',
@@ -128,13 +128,24 @@ export const saffronThyme: Project = {
       client: 'Saffron & Thyme Restaurant',
       duration: '8 weeks',
       year: '2024',
-      projectType: 'Restaurant Website',
-      projectUrl: 'https://saffron-thyme.com', // Replace with actual URL
+      projectType: {
+        en: 'Restaurant Website',
+        pl: 'Strona Restauracji'
+      },
+      projectUrl: 'https://saffron-thyme.netlify.app',
       pageSpeedScores: createPageSpeedScores({
-        'Performance': 90,
-        'Accessibility': 95,
-        'Best Practices': 92,
-        'SEO': 98
+        mobile: {
+          'Performance': 88,
+          'Accessibility': 95,
+          'Best Practices': 100,
+          'SEO': 100
+        },
+        desktop: {
+          'Performance': 98,
+          'Accessibility': 95,
+          'Best Practices': 100,
+          'SEO': 100
+        }
       }),
       pageSpeedUrl: 'https://pagespeed.web.dev/analysis/https-saffron-thyme-netlify-app/6ugca3y70n?form_factor=mobile'
     }

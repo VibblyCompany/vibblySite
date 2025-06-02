@@ -84,8 +84,11 @@ export const projectTemplate: Project = {
     client: 'Client Name',
     duration: 'Project Duration', // e.g., '12 weeks'
     year: 'Project Year', // e.g., '2024'
-    projectType: 'Project Type', // e.g., 'Web Application'
-    projectUrl: 'https://project-url.com',
+    projectType: {
+      en: 'Project Type', // e.g., 'Web Application'
+      pl: 'Typ Projektu' // e.g., 'Aplikacja Webowa'
+    },
+    projectUrl: 'https://example.com',
     pageSpeedScores: createPageSpeedScores({
       'Performance': 0,
       'Accessibility': 0,

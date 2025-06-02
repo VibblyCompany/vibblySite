@@ -55,9 +55,12 @@ export interface Project {
     client: string;
     duration: string;
     year: string;
-    projectType: string;
+    projectType: {
+      en: string;
+      pl: string;
+    };
     projectUrl: string;
-    pageSpeedScores: PageSpeedScore[];
+    pageSpeedScores: PageSpeedScores;
     pageSpeedUrl: string;
   };
 }
@@ -66,6 +69,11 @@ export interface PageSpeedScore {
   category: PageSpeedScoreCategory;
   score: number;
   description: string;
+}
+
+export interface PageSpeedScores {
+  mobile: PageSpeedScore[];
+  desktop: PageSpeedScore[];
 }
 
 export type PageSpeedScoreCategory = 'Performance' | 'Accessibility' | 'Best Practices' | 'SEO';
@@ -85,12 +93,22 @@ export const PAGE_SPEED_CATEGORIES: Record<PageSpeedScoreCategory, { description
   }
 };
 
-export const createPageSpeedScores = (scores: Record<PageSpeedScoreCategory, number>): PageSpeedScore[] => {
-  return Object.entries(scores).map(([category, score]) => ({
-    category: category as PageSpeedScoreCategory,
-    score,
-    description: PAGE_SPEED_CATEGORIES[category as PageSpeedScoreCategory].description
-  }));
+export const createPageSpeedScores = (scores: { 
+  mobile: Record<PageSpeedScoreCategory, number>, 
+  desktop: Record<PageSpeedScoreCategory, number> 
+}): PageSpeedScores => {
+  return {
+    mobile: Object.entries(scores.mobile).map(([category, score]) => ({
+      category: category as PageSpeedScoreCategory,
+      score,
+      description: PAGE_SPEED_CATEGORIES[category as PageSpeedScoreCategory].description
+    })),
+    desktop: Object.entries(scores.desktop).map(([category, score]) => ({
+      category: category as PageSpeedScoreCategory,
+      score,
+      description: PAGE_SPEED_CATEGORIES[category as PageSpeedScoreCategory].description
+    }))
+  };
 };
 
 export interface ProjectPageData {
@@ -118,10 +136,13 @@ export interface ProjectPageData {
   gallery: string[];
   duration: string;
   year: string;
-  projectType: string;
+  projectType: {
+    en: string;
+    pl: string;
+  };
   client: string;
   projectUrl: string;
-  pageSpeedScores: PageSpeedScore[];
+  pageSpeedScores: PageSpeedScores;
   pageSpeedUrl: string;
 }
 
@@ -140,16 +161,17 @@ export const getProjectPageData = (projects: Project[], id: string, language: 'e
   const project = projects.find(p => p.id === id);
   if (!project) return null;
 
+  const translations = project.translations[language];
   return {
     id: project.id,
-    title: project.translations[language].title,
-    description: project.translations[language].description,
-    category: project.translations[language].category,
-    image: project.projectPage.image,
-    fullDescription: project.translations[language].fullDescription,
     stack: project.stack,
-    testimonial: project.translations[language].testimonial,
-    clientBenefits: project.translations[language].clientBenefits,
+    title: translations.title,
+    description: translations.description,
+    category: translations.category,
+    fullDescription: translations.fullDescription,
+    testimonial: translations.testimonial,
+    clientBenefits: translations.clientBenefits,
+    image: project.projectPage.image,
     gallery: project.projectPage.gallery,
     duration: project.projectPage.duration,
     year: project.projectPage.year,

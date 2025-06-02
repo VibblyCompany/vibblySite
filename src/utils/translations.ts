@@ -329,11 +329,11 @@ export const translations = {
           description: "Określa, jak szybko strona się ładuje i jak sprawnie działa dla użytkownika"
         },
         accessibility: {
-          title: "Dostępność",
+          title: "Ułatwienia dostępu",
           description: "Pokazuje, czy strona jest przyjazna i czytelna dla wszystkich, także osób z niepełnosprawnościami"
         },
         bestPractices: {
-          title: "Dobre Praktyki",
+          title: "Sprawdzone metody",
           description: "Sprawdza, czy strona spełnia aktualne standardy bezpieczeństwa i jakości"
         },
         seo: {

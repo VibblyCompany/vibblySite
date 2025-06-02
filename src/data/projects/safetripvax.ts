@@ -84,13 +84,24 @@ export const safetripvax: Project = {
     client: 'Client Name',
     duration: 'Project Duration', // e.g., '12 weeks'
     year: 'Project Year', // e.g., '2024'
-    projectType: 'Project Type', // e.g., 'Web Application'
+    projectType: {
+      en: 'Web Application',
+      pl: 'Aplikacja Webowa'
+    },
     projectUrl: 'https://safetripvax.com/',
     pageSpeedScores: createPageSpeedScores({
-      'Performance': 99,
-      'Accessibility': 93,
-      'Best Practices': 100,
-      'SEO': 100
+      mobile: {
+        'Performance': 90,
+        'Accessibility': 95,
+        'Best Practices': 92,
+        'SEO': 98
+      },
+      desktop: {
+        'Performance': 95,
+        'Accessibility': 98,
+        'Best Practices': 94,
+        'SEO': 99
+      }
     }),
     pageSpeedUrl: 'https://pagespeed.web.dev/analysis/https-safetripvax-com/wkgauzastn?hl=pl&form_factor=desktop'
   }

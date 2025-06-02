@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock, Briefcase, ExternalLink } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -12,6 +12,10 @@ const ProjectPage: React.FC = () => {
   const { id } = useParams();
   const { language } = useLanguage();
   const project = id ? getProjectPageData(id, language as 'en' | 'pl') : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!project) {
     return (
@@ -55,7 +59,7 @@ const ProjectPage: React.FC = () => {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-violet-200 to-gray-300 text-transparent bg-clip-text"
             >
               {projectData.title}
             </motion.h1>
@@ -93,13 +97,6 @@ const ProjectPage: React.FC = () => {
             >
               <Clock className="w-5 h-5 mr-2 text-violet-400" />
               <span>{language === 'en' ? 'Duration' : 'Czas trwania'}: {projectData.duration}</span>
-            </motion.div>
-            <motion.div 
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center text-gray-300 bg-gray-900/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-xl border border-violet-500/10"
-            >
-              <Briefcase className="w-5 h-5 mr-2 text-violet-400" />
-              <span>{language === 'en' ? 'Type' : 'Typ'}: {projectData.projectType}</span>
             </motion.div>
             <motion.div 
               whileHover={{ scale: 1.05 }}
