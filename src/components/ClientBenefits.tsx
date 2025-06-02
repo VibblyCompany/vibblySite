@@ -1,18 +1,28 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Users, Smartphone, Edit, Shield, Layout, Image, Settings, Clock } from 'lucide-react';
+import { Search, Users, Smartphone, Edit, Shield, Layout, Image, Settings, Clock, Map, Globe, ShieldCheck, User, HelpCircle } from 'lucide-react';
 
 const iconComponents = {
+  // PascalCase icons
   Search,
   Users,
   Smartphone,
   Edit,
   Shield,
   Layout,
-  LayoutGrid: Layout, // Map LayoutGrid to Layout icon
+  LayoutGrid: Layout,
   Image,
   Settings,
-  Clock
+  Clock,
+  Map,
+  Globe,
+  ShieldCheck,
+  User,
+  HelpCircle,
+  // kebab-case icons
+  'shield-check': ShieldCheck,
+  'user-friendly': User,
+  'help-circle': HelpCircle
 };
 
 interface ClientBenefitsProps {
@@ -72,7 +82,19 @@ const ClientBenefits: React.FC<ClientBenefitsProps> = ({ title, subtitle, benefi
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {benefits.map((benefit, index) => {
-          const IconComponent = iconComponents[benefit.icon as keyof typeof iconComponents];
+          // Try both PascalCase and kebab-case versions of the icon name
+          const iconName = benefit.icon;
+          const pascalCaseName = iconName.split('-').map(word => 
+            word.charAt(0).toUpperCase() + word.slice(1)
+          ).join('');
+          
+          const IconComponent = iconComponents[iconName as keyof typeof iconComponents] || 
+                              iconComponents[pascalCaseName as keyof typeof iconComponents] || 
+                              iconComponents['help-circle'];
+          
+          if (!IconComponent) {
+            console.warn(`Icon "${iconName}" not found, using fallback icon`);
+          }
           
           return (
             <motion.div
