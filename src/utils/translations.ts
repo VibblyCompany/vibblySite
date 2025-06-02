@@ -1,264 +1,348 @@
 export const translations = {
   en: {
     nav: {
-      home: 'Home',
-      about: 'About Us',
-      portfolio: 'Portfolio',
-      services: 'Services',
-      contact: 'Contact',
-      cta: 'Get in Touch'
+      home: "Home",
+      about: "About Us",
+      portfolio: "Portfolio",
+      services: "Services",
+      contact: "Contact",
+      cta: "Get in Touch"
     },
     hero: {
-      headline1: 'We Create Digital',
-      headline2: 'Experiences That Matter',
-      subheadline: 'Modern websites – fast, affordable, and full of style. Build a strong online presence with a team you can count on.',
+      headline1: "We Create Digital",
+      headline2: "Experiences That Matter",
+      subheadline: "Modern websites – fast, affordable, and full of style. Build a strong online presence with a team you can count on.",
       cta: "Let's Build Together"
     },
     about: {
-      title: 'Who Are We?',
-      subtitle: 'We’re a team of creative developers, designers, and makers. We care about making every website not just look good – but feel right to our clients.',
+      title: "Who Are We?",
+      subtitle: "We're a team of creative developers, designers, and makers. We care about making every website not just look good – but feel right to our clients.",
       feature1: {
-        title: 'Fast Turnaround',
-        description: 'Your website can be ready in just a few days. We work quickly and efficiently — no delays, no fluff. Need a site “right now”? With us, it’s possible.'
+        title: "Fast Turnaround",
+        description: "Your website can be ready in just a few days. We work quickly and efficiently — no delays, no fluff. Need a site \"right now\"? With us, it's possible."
       },
       feature2: {
-        title: 'Fair Pricing',
-        description: 'Professional quality without overpaying. You don’t need a big budget to get a great site. We offer honest pricing and real value for every penny.'
+        title: "Fair Pricing",
+        description: "Professional quality without overpaying. You don't need a big budget to get a great site. We offer honest pricing and real value for every penny."
       },
       feature3: {
-        title: 'Stylish & Thoughtful',
-        description: 'Modern design that grabs attention. We build pixel-perfect websites that look stunning, inspire trust, and support your brand’s identity.'
+        title: "Stylish & Thoughtful",
+        description: "Modern design that grabs attention. We build pixel-perfect websites that look stunning, inspire trust, and support your brand's identity."
       },
       mission: {
-        title: 'Our Mission',
-        description1: 'At Vibbly, we believe every business deserves a great website – without hassle, delays, or overspending.',
-        description2: 'Our mission is to deliver beautiful and effective websites fast, efficiently, and at a reasonable cost.'
+        title: "Our Mission",
+        description1: "At Vibbly, we believe every business deserves a great website – without hassle, delays, or overspending.",
+        description2: "Our mission is to deliver beautiful and effective websites fast, efficiently, and at a reasonable cost."
       },
-      quote: 'We don’t just build websites and apps. We create digital experiences that tell stories, solve problems, and spark meaningful connections.',
-      quoteAuthor: 'Aleksander Kowalski',
-      quoteRole: 'Founder & CEO'
+      quote: "We don't just build websites and apps. We create digital experiences that tell stories, solve problems, and spark meaningful connections.",
+      quoteAuthor: "Aleksander Kowalski",
+      quoteRole: "Founder & CEO"
     },
     portfolio: {
-      title: 'Our Projects',
-      subtitle: 'Take a look at what we’ve already built – and imagine what we can do for you.',
-      viewProject: 'View Project',
-      backToPortfolio: 'Back to Portfolio'
+      title: "Our Projects",
+      subtitle: "Take a look at what we've already built – and imagine what we can do for you.",
+      viewProject: "View Project",
+      backToPortfolio: "Back to Portfolio"
     },
     services: {
-      title: 'Our Services',
-      subtitle: 'From idea to live website – we support you every step of the way.',
-      cta: 'Discuss Your Project',
+      title: "Our Services",
+      subtitle: "From idea to live website – we support you every step of the way.",
+      cta: "Discuss Your Project",
       service1: {
-        title: 'From Vision to Plan',
-        description: 'We’ll help translate your vision into a concrete action plan. Together, we’ll define goals, site structure, and key features.',
+        title: "From Vision to Plan",
+        description: "We'll help translate your vision into a concrete action plan. Together, we'll define goals, site structure, and key features.",
         features: [
-          'Site Planning & Consultation',
-          'Goal and Scope Definition',
-          'Structure & Content Mapping',
-          'Creative and Strategic Support'
+          "Site Planning & Consultation",
+          "Goal and Scope Definition",
+          "Structure & Content Mapping",
+          "Creative and Strategic Support"
         ]
       },
       service3: {
-        title: 'UI/UX Design',
-        description: 'We create attractive, modern, and intuitive interfaces that draw attention and deliver great user experiences.',
+        title: "UI/UX Design",
+        description: "We create attractive, modern, and intuitive interfaces that draw attention and deliver great user experiences.",
         features: [
-          'Modern Visual Design',
-          'Responsive & Mobile-Ready',
-          'Intuitive Navigation & Layout',
-          'Consistent Brand Identity'
+          "Modern Visual Design",
+          "Responsive & Mobile-Ready",
+          "Intuitive Navigation & Layout",
+          "Consistent Brand Identity"
         ]
       },
       service2: {
-        title: 'Development & SEO',
-        description: 'We handle the full implementation — from hosting setup to SEO optimization and smooth performance across all functions.',
+        title: "Development & SEO",
+        description: "We handle the full implementation — from hosting setup to SEO optimization and smooth performance across all functions.",
         features: [
-          'Functional Website Logic',
-          'Publishing & Hosting',
-          'SEO Optimization',
-          'Speed & Security Focus'
+          "Functional Website Logic",
+          "Publishing & Hosting",
+          "SEO Optimization",
+          "Speed & Security Focus"
         ]
       }
-    },    
+    },
     contact: {
-      title: 'Contact Us',
-      subtitle: 'Ready to start your project? Reach out and let’s discuss how we can bring your vision to life.',
+      title: "Contact Us",
+      subtitle: "Ready to start your project? Reach out and let's discuss how we can bring your vision to life.",
       form: {
-        name: 'Your Name',
-        email: 'Your Email',
-        message: 'Your Message',
-        submit: 'Send Message'
+        name: "Your Name",
+        email: "Your Email",
+        message: "Your Message",
+        submit: "Send Message"
       },
       schedule: {
-        title: 'Prefer a Call?',
-        button: 'Schedule a Meeting'
+        title: "Prefer a Call?",
+        button: "Schedule a Meeting"
       },
       info: {
-        title: 'Contact Info',
-        email: 'Email',
-        phone: 'Phone',
-        location: 'Location'
+        title: "Contact Info",
+        email: "Email",
+        phone: "Phone",
+        location: "Location"
       },
       success: {
-        title: 'Message Sent!',
-        message: 'Thank you for reaching out. We’ll get back to you shortly.'
+        title: "Message Sent!",
+        message: "Thank you for reaching out. We'll get back to you shortly."
       }
     },
     footer: {
-      description: 'Vibbly is a creative tech agency focused on high-quality digital experiences for modern brands and businesses.',
+      description: "Vibbly is a creative tech agency focused on high-quality digital experiences for modern brands and businesses.",
       quickLinks: {
-        title: 'Quick Links',
+        title: "Quick Links",
         links: [
-          'Home',
-          'About Us',
-          'Services',
-          'Portfolio',
-          'Careers',
-          'Blog'
+          "Home",
+          "About Us",
+          "Services",
+          "Portfolio",
+          "Careers",
+          "Blog"
         ]
       },
       legal: {
-        title: 'Legal',
+        title: "Legal",
         links: [
-          'Terms of Service',
-          'Privacy Policy',
-          'Cookie Policy',
-          'GDPR Compliance'
+          "Terms of Service",
+          "Privacy Policy",
+          "Cookie Policy",
+          "GDPR Compliance"
         ]
       },
-      rights: 'All rights reserved.',
-      terms: 'Terms of Service',
-      privacy: 'Privacy Policy'
+      rights: "All rights reserved.",
+      terms: "Terms of Service",
+      privacy: "Privacy Policy"
+    },
+    project: {
+      details: {
+        title: "Project Details",
+        overview: "Project Overview",
+        client: "Client",
+        duration: "Duration",
+        type: "Type",
+        year: "Year",
+        backToPortfolio: "Back to Portfolio",
+        notFound: "Project Not Found",
+        backToHome: "Back to Home"
+      },
+      benefits: {
+        title: "E-commerce Benefits",
+        subtitle: "How this project delivers value"
+      },
+      gallery: {
+        title: "Project Gallery",
+        viewImage: "View Image"
+      },
+      pageSpeed: {
+        title: "Google PageSpeed Insights ",
+        performance: {
+          title: "Performance",
+          description: "Measures how fast the page loads and becomes interactive"
+        },
+        accessibility: {
+          title: "Accessibility",
+          description: "Ensures content is accessible to all users"
+        },
+        bestPractices: {
+          title: "Best Practices",
+          description: "Follows modern web development best practices"
+        },
+        seo: {
+          title: "SEO",
+          description: "Optimized for search engine visibility"
+        },
+        viewReport: "View Full Report",
+        score: "Score"
+      }
     }
   },
   pl: {
     nav: {
-      home: 'Strona główna',
-      about: 'O nas',
-      portfolio: 'Portfolio',
-      services: 'Usługi',
-      contact: 'Kontakt',
-      cta: 'Skontaktuj się'
+      home: "Strona główna",
+      about: "O nas",
+      portfolio: "Portfolio",
+      services: "Usługi",
+      contact: "Kontakt",
+      cta: "Skontaktuj się"
     },
     hero: {
-      headline1: 'Tworzymy Cyfrowe',
-      headline2: 'Doświadczenia, Które Mają Znaczenie',
-      subheadline: 'Nowoczesne strony internetowe – szybko, przystępnie i z klasą. Zbuduj silną obecność online z zespołem, na którym możesz polegać.',
-      cta: 'Zbudujmy Coś Razem'
+      headline1: "Tworzymy Cyfrowe",
+      headline2: "Doświadczenia, Które Mają Znaczenie",
+      subheadline: "Nowoczesne strony internetowe – szybko, przystępnie i z klasą. Zbuduj silną obecność online z zespołem, na którym możesz polegać.",
+      cta: "Zbudujmy Coś Razem"
     },
     about: {
-      title: 'Kim jesteśmy?',
-      subtitle: 'Jesteśmy zespołem kreatywnych twórców, projektantów i programistów. Zależy nam, by każda strona cieszyła nie tylko oko, ale i klienta.',
+      title: "Kim jesteśmy?",
+      subtitle: "Jesteśmy zespołem kreatywnych twórców, projektantów i programistów. Zależy nam, by każda strona cieszyła nie tylko oko, ale i klienta.",
       feature1: {
-        title: 'Błyskawicznie',
-        description: 'Twoja strona gotowa nawet w kilka dni. Działamy sprawnie i konkretnie — bez zbędnego przeciągania. Potrzebujesz strony "na już"? U nas to możliwe.'
+        title: "Błyskawicznie",
+        description: "Twoja strona gotowa nawet w kilka dni. Działamy sprawnie i konkretnie — bez zbędnego przeciągania. Potrzebujesz strony \"na już\"? U nas to możliwe."
       },
       feature2: {
-        title: 'W dobrej cenie',
-        description: 'Profesjonalna jakość bez przepłacania. Nie musisz wydawać fortuny, żeby mieć porządną stronę. Oferujemy uczciwe ceny i realną wartość za każdą złotówkę.'
+        title: "W dobrej cenie",
+        description: "Profesjonalna jakość bez przepłacania. Nie musisz wydawać fortuny, żeby mieć porządną stronę. Oferujemy uczciwe ceny i realną wartość za każdą złotówkę."
       },
       feature3: {
-        title: 'Z pomysłem i stylem',
-        description: 'Nowoczesny design, który przyciąga klientów. Tworzymy strony z dbałością o każdy piksel, które nie tylko wyglądają świetnie, ale też działają na korzyść Twojej marki i wzbudzają zaufanie.'
+        title: "Z pomysłem i stylem",
+        description: "Nowoczesny design, który przyciąga klientów. Tworzymy strony z dbałością o każdy piksel, które nie tylko wyglądają świetnie, ale też działają na korzyść Twojej marki i wzbudzają zaufanie."
       },
       mission: {
-        title: 'Nasza Misja',
-        description1: 'W Vibbly wierzymy, że każda firma zasługuje na świetną stronę internetową – bez komplikacji, bez przeciągania, bez przepłacania.',
-        description2: 'Nasza misja to dostarczać efektowne i skuteczne strony www szybko, sprawnie i w rozsądnej cenie.'
+        title: "Nasza Misja",
+        description1: "W Vibbly wierzymy, że każda firma zasługuje na świetną stronę internetową – bez komplikacji, bez przeciągania, bez przepłacania.",
+        description2: "Nasza misja to dostarczać efektowne i skuteczne strony www szybko, sprawnie i w rozsądnej cenie."
       },
-      quote: 'Nie tylko budujemy strony internetowe i aplikacje. Tworzymy cyfrowe doświadczenia, które opowiadają historie, rozwiązują problemy i tworzą znaczące połączenia.',
-      quoteAuthor: 'Aleksander Kowalski',
-      quoteRole: 'Założyciel i CEO'
+      quote: "Nie tylko budujemy strony internetowe i aplikacje. Tworzymy cyfrowe doświadczenia, które opowiadają historie, rozwiązują problemy i tworzą znaczące połączenia.",
+      quoteAuthor: "Aleksander Kowalski",
+      quoteRole: "Założyciel i CEO"
     },
     portfolio: {
-      title: 'Nasze Projekty',
-      subtitle: 'Zobacz, co już zbudowaliśmy – i pomyśl, co możemy zrobić dla Ciebie.',
-      viewProject: 'Zobacz Projekt',
-      backToPortfolio: 'Powrót do Portfolio'
+      title: "Nasze Projekty",
+      subtitle: "Zobacz, co już zbudowaliśmy – i pomyśl, co możemy zrobić dla Ciebie.",
+      viewProject: "Zobacz Projekt",
+      backToPortfolio: "Powrót do Portfolio"
     },
     services: {
-      title: 'Nasze Usługi',
-      subtitle: 'Od pomysłu po działającą stronę – oferujemy pełne wsparcie na każdym etapie.',
-      cta: 'Omów Swój Projekt',
+      title: "Nasze Usługi",
+      subtitle: "Od pomysłu po działającą stronę – oferujemy pełne wsparcie na każdym etapie.",
+      cta: "Omów Swój Projekt",
       service1: {
-        title: 'Od Pomysłu do Projektu',
-        description: 'Pomożemy Ci przełożyć Twoją wizję na konkretny plan działania. Wspólnie określimy cele, strukturę strony i kluczowe funkcje.',
+        title: "Od Pomysłu do Projektu",
+        description: "Pomożemy Ci przełożyć Twoją wizję na konkretny plan działania. Wspólnie określimy cele, strukturę strony i kluczowe funkcje.",
         features: [
-          'Doradztwo i Planowanie Strony',
-          'Pomoc w Określeniu Celu i Zakresu',
-          'Tworzenie Struktury i Zawartości',
-          'Wsparcie Kreatywne i Strategiczne'
+          "Doradztwo i Planowanie Strony",
+          "Pomoc w Określeniu Celu i Zakresu",
+          "Tworzenie Struktury i Zawartości",
+          "Wsparcie Kreatywne i Strategiczne"
         ]
       },
       service3: {
-        title: 'Projektowanie UI/UX',
-        description: 'Tworzymy atrakcyjne, nowoczesne i intuicyjne interfejsy, które przyciągają uwagę i budują pozytywne doświadczenie użytkownika.',
+        title: "Projektowanie UI/UX",
+        description: "Tworzymy atrakcyjne, nowoczesne i intuicyjne interfejsy, które przyciągają uwagę i budują pozytywne doświadczenie użytkownika.",
         features: [
-          'Nowoczesne Projekty Graficzne',
-          'Responsywność i Mobilna Wersja',
-          'Intuicyjna Nawigacja i Struktura',
-          'Spójna Identyfikacja Wizualna'
+          "Nowoczesne Projekty Graficzne",
+          "Responsywność i Mobilna Wersja",
+          "Intuicyjna Nawigacja i Struktura",
+          "Spójna Identyfikacja Wizualna"
         ]
       },
       service2: {
-        title: 'Techniczne Wdrożenie i SEO',
-        description: 'Zajmujemy się pełnym wdrożeniem strony – od konfiguracji hostingu, przez optymalizację SEO, aż po płynne działanie każdej funkcji.',
+        title: "Techniczne Wdrożenie i SEO",
+        description: "Zajmujemy się pełnym wdrożeniem strony – od konfiguracji hostingu, przez optymalizację SEO, aż po płynne działanie każdej funkcji.",
         features: [
-          'Funkcjonalność i Logika Strony',
-          'Publikacja i Hosting',
-          'Optymalizacja Pod Kątem SEO',
-          'Dbałość o Szybkość i Bezpieczeństwo'
+          "Funkcjonalność i Logika Strony",
+          "Publikacja i Hosting",
+          "Optymalizacja Pod Kątem SEO",
+          "Dbałość o Szybkość i Bezpieczeństwo"
         ]
       }
-    },    
+    },
     contact: {
-      title: 'Skontaktuj się',
-      subtitle: 'Gotowy, aby rozpocząć swój projekt? Skontaktuj się, aby omówić, jak możemy pomóc w realizacji Twojej wizji.',
+      title: "Skontaktuj się",
+      subtitle: "Gotowy, aby rozpocząć swój projekt? Skontaktuj się, aby omówić, jak możemy pomóc w realizacji Twojej wizji.",
       form: {
-        name: 'Twoje Imię',
-        email: 'Twój Email',
-        message: 'Twoja Wiadomość',
-        submit: 'Wyślij Wiadomość'
+        name: "Twoje Imię",
+        email: "Twój Email",
+        message: "Twoja Wiadomość",
+        submit: "Wyślij Wiadomość"
       },
       schedule: {
-        title: 'Wolisz spotkanie?',
-        button: 'Zaplanuj Rozmowę'
+        title: "Wolisz spotkanie?",
+        button: "Zaplanuj Rozmowę"
       },
       info: {
-        title: 'Informacje Kontaktowe',
-        email: 'Email',
-        phone: 'Telefon',
-        location: 'Lokalizacja'
+        title: "Informacje Kontaktowe",
+        email: "Email",
+        phone: "Telefon",
+        location: "Lokalizacja"
       },
       success: {
-        title: 'Wiadomość Wysłana!',
-        message: 'Dziękujemy za kontakt. Odezwiemy się wkrótce.'
+        title: "Wiadomość Wysłana!",
+        message: "Dziękujemy za kontakt. Odezwiemy się wkrótce."
       }
     },
     footer: {
-      description: 'Vibbly to kreatywna agencja technologiczna specjalizująca się w wysokiej jakości doświadczeniach cyfrowych dla postępowych firm i marek.',
+      description: "Vibbly to kreatywna agencja technologiczna specjalizująca się w wysokiej jakości doświadczeniach cyfrowych dla postępowych firm i marek.",
       quickLinks: {
-        title: 'Szybkie Linki',
+        title: "Szybkie Linki",
         links: [
-          'Strona Główna',
-          'O Nas',
-          'Usługi',
-          'Portfolio',
-          'Kariera',
-          'Blog'
+          "Strona Główna",
+          "O Nas",
+          "Usługi",
+          "Portfolio",
+          "Kariera",
+          "Blog"
         ]
       },
       legal: {
-        title: 'Informacje Prawne',
+        title: "Informacje Prawne",
         links: [
-          'Warunki Korzystania z Usług',
-          'Polityka Prywatności',
-          'Polityka Cookies',
-          'Zgodność z RODO'
+          "Warunki Korzystania z Usług",
+          "Polityka Prywatności",
+          "Polityka Cookies",
+          "Zgodność z RODO"
         ]
       },
-      rights: 'Wszelkie prawa zastrzeżone.',
-      terms: 'Warunki Korzystania',
-      privacy: 'Polityka Prywatności'
+      rights: "Wszelkie prawa zastrzeżone.",
+      terms: "Warunki Korzystania",
+      privacy: "Polityka Prywatności"
     },
+    project: {
+      details: {
+        title: "Szczegóły Projektu",
+        overview: "Przegląd Projektu",
+        client: "Klient",
+        duration: "Czas trwania",
+        type: "Typ",
+        year: "Rok",
+        backToPortfolio: "Powrót do Portfolio",
+        notFound: "Nie Znaleziono Projektu",
+        backToHome: "Powrót do Strony Głównej"
+      },
+      benefits: {
+        title: "Korzyści E-commerce",
+        subtitle: "Jak ten projekt dostarcza wartość"
+      },
+      gallery: {
+        title: "Galeria Projektu",
+        viewImage: "Zobacz Zdjęcie"
+      },
+      pageSpeed: {
+        title: "Analiza Wydajności Strony Googla",
+        performance: {
+          title: "Wydajność",
+          description: "Mierzy jak szybko strona się ładuje i staje się interaktywna"
+        },
+        accessibility: {
+          title: "Dostępność",
+          description: "Zapewnia dostępność treści dla wszystkich użytkowników"
+        },
+        bestPractices: {
+          title: "Dobre Praktyki",
+          description: "Zgodność z nowoczesnymi standardami tworzenia stron internetowych"
+        },
+        seo: {
+          title: "SEO",
+          description: "Zoptymalizowane pod kątem widoczności w wyszukiwarkach"
+        },
+        viewReport: "Zobacz Pełny Raport",
+        score: "Wynik"
+      }
+    }
   }
 };
