@@ -153,19 +153,19 @@ export const translations = {
         title: "Google PageSpeed Insights ",
         performance: {
           title: "Performance",
-          description: "Measures how fast the page loads and becomes interactive"
+          description: "Shows how fast your website loads and responds to users"
         },
         accessibility: {
           title: "Accessibility",
-          description: "Ensures content is accessible to all users"
+          description: "Checks if your website is user-friendly for everyone — including people with disabilities"
         },
         bestPractices: {
           title: "Best Practices",
-          description: "Follows modern web development best practices"
+          description: "Evaluates if your website follows modern web standards for security and quality"
         },
         seo: {
           title: "SEO",
-          description: "Optimized for search engine visibility"
+          description: "Measures how well your website can be discovered by Google and other search engines"
         },
         viewReport: "View Full Report",
         score: "Score"
@@ -326,20 +326,20 @@ export const translations = {
         title: "Analiza Wydajności Strony Googla",
         performance: {
           title: "Wydajność",
-          description: "Mierzy jak szybko strona się ładuje i staje się interaktywna"
+          description: "Określa, jak szybko strona się ładuje i jak sprawnie działa dla użytkownika"
         },
         accessibility: {
           title: "Dostępność",
-          description: "Zapewnia dostępność treści dla wszystkich użytkowników"
+          description: "Pokazuje, czy strona jest przyjazna i czytelna dla wszystkich, także osób z niepełnosprawnościami"
         },
         bestPractices: {
           title: "Dobre Praktyki",
-          description: "Zgodność z nowoczesnymi standardami tworzenia stron internetowych"
+          description: "Sprawdza, czy strona spełnia aktualne standardy bezpieczeństwa i jakości"
         },
         seo: {
           title: "SEO",
-          description: "Zoptymalizowane pod kątem widoczności w wyszukiwarkach"
-        },
+          description: "Ocena, jak dobrze strona może być znaleziona przez Google i inne wyszukiwarki"
+        },        
         viewReport: "Zobacz Pełny Raport",
         score: "Wynik"
       }

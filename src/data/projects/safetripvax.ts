@@ -1,7 +1,7 @@
 import { Project, createPageSpeedScores } from './types';
 
-export const projectTemplate: Project = {
-  id: 'project-id', // Unique identifier for the project
+export const safetripvax: Project = {
+  id: 'safetripvax', // Unique identifier for the project
   stack: [
     'Technology 1',
     'Technology 2',
@@ -85,13 +85,13 @@ export const projectTemplate: Project = {
     duration: 'Project Duration', // e.g., '12 weeks'
     year: 'Project Year', // e.g., '2024'
     projectType: 'Project Type', // e.g., 'Web Application'
-    projectUrl: 'https://project-url.com',
+    projectUrl: 'https://safetripvax.com/',
     pageSpeedScores: createPageSpeedScores({
-      'Performance': 0,
-      'Accessibility': 0,
-      'Best Practices': 0,
-      'SEO': 0
+      'Performance': 99,
+      'Accessibility': 93,
+      'Best Practices': 100,
+      'SEO': 100
     }),
-    pageSpeedUrl: 'https://pagespeed.web.dev/'
+    pageSpeedUrl: 'https://pagespeed.web.dev/analysis/https-safetripvax-com/wkgauzastn?hl=pl&form_factor=desktop'
   }
 }; 
