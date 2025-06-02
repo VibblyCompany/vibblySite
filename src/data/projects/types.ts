@@ -55,10 +55,6 @@ export interface Project {
     client: string;
     duration: string;
     year: string;
-    projectType: {
-      en: string;
-      pl: string;
-    };
     projectUrl: string;
     pageSpeedScores: PageSpeedScores;
     pageSpeedUrl: string;
@@ -136,10 +132,6 @@ export interface ProjectPageData {
   gallery: string[];
   duration: string;
   year: string;
-  projectType: {
-    en: string;
-    pl: string;
-  };
   client: string;
   projectUrl: string;
   pageSpeedScores: PageSpeedScores;
@@ -175,10 +167,9 @@ export const getProjectPageData = (projects: Project[], id: string, language: 'e
     gallery: project.projectPage.gallery,
     duration: project.projectPage.duration,
     year: project.projectPage.year,
-    projectType: project.projectPage.projectType,
     client: project.projectPage.client,
     projectUrl: project.projectPage.projectUrl,
     pageSpeedScores: project.projectPage.pageSpeedScores,
-    pageSpeedUrl: project.projectPage.pageSpeedUrl
+    pageSpeedUrl: project.projectPage.pageSpeedUrl,
   };
 }; 

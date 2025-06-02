@@ -84,10 +84,6 @@ export const safetripvax: Project = {
     client: 'Client Name',
     duration: 'Project Duration', // e.g., '12 weeks'
     year: 'Project Year', // e.g., '2024'
-    projectType: {
-      en: 'Web Application',
-      pl: 'Aplikacja Webowa'
-    },
     projectUrl: 'https://safetripvax.com/',
     pageSpeedScores: createPageSpeedScores({
       mobile: {

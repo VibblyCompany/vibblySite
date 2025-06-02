@@ -64,7 +64,7 @@ export const saffronThyme: Project = {
         category: 'Own project',
         fullDescription: [
          'Nowoczesna i responsywna strona internetowa dla restauracji, zaprojektowana z myślą o wzmocnieniu wizerunku marki oraz usprawnieniu codziennej obsługi klientów. Projekt skupia się na przejrzystej prezentacji menu, łatwym systemie rezerwacji oraz eleganckim, dopracowanym designie.',
-          'Strona została zoptymalizowana pod kątem SEO i użytkowników mobilnych, co zapewnia wysoką dostępność i intuicyjne korzystanie na wszystkich urządzeniach. System zarządzania treścią pozwala właścicielowi lokalu w prosty sposób aktualizować menu, godziny otwarcia czy oferty specjalne – bez potrzeby wsparcia technicznego.',
+          'Strona została zoptymalizowana pod kątem SEO i użytkowników mobilnych, co zapewnia wysoką dostępność i intuicyjne korzystanie na wszystkich urządzeniach.System zarządzania treścią pozwala właścicielowi lokalu w prosty sposób aktualizować menu, godziny otwarcia czy oferty specjalne – bez potrzeby wsparcia technicznego.',
           'Projekt stanowi przykład połączenia estetyki, funkcjonalności i realnej wartości biznesowej dla branży gastronomicznej.'
         ],
 
@@ -110,20 +110,16 @@ export const saffronThyme: Project = {
       image: mainPageImage // You'll need to add this image
     },
     projectPage: {
-      image: coverImage,
+      image: coverImage, // You'll need to add this image
       gallery: [
         '/projects/saffron-thyme/gallery-1.jpg',
         '/projects/saffron-thyme/gallery-2.jpg',
         '/projects/saffron-thyme/gallery-3.jpg'
       ],
-      client: 'Saffron & Thyme Restaurant',
-      duration: '8 weeks',
-      year: '2024',
-      projectType: {
-        en: 'Restaurant Website',
-        pl: 'Strona Restauracji'
-      },
-      projectUrl: 'https://saffron-thyme.netlify.app',
+      client: 'Own project',
+      duration: '4 days',
+      year: '2025',
+      projectUrl: 'https://saffron-thyme.netlify.app', // Replace with actual URL
 
       pageSpeedScores: createPageSpeedScores({
         mobile: {
