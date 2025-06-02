@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Users, Smartphone, Edit, Shield, Layout } from 'lucide-react';
+import { Search, Users, Smartphone, Edit, Shield, Layout, Image, Settings, Clock } from 'lucide-react';
 
 const iconComponents = {
   Search,
@@ -8,7 +8,11 @@ const iconComponents = {
   Smartphone,
   Edit,
   Shield,
-  Layout
+  Layout,
+  LayoutGrid: Layout, // Map LayoutGrid to Layout icon
+  Image,
+  Settings,
+  Clock
 };
 
 interface ClientBenefitsProps {

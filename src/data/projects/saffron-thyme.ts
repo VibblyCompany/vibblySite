@@ -14,105 +14,96 @@ export const saffronThyme: Project = {
     translations: {
       en: {
         title: 'Saffron & Thyme Restaurant',
-        description: 'A modern, responsive restaurant website with multilingual support, featuring an elegant menu presentation and seamless reservation system',
-        category: 'Restaurant Website',
+        description: 'A modern, responsive restaurant website featuring an elegant menu presentation, and seamless reservation system',
+        category: 'Own project',
         fullDescription: [
-          'Saffron & Thyme is a sophisticated restaurant website designed to provide an exceptional digital experience for diners. The website combines elegant design with practical functionality, making it easy for customers to explore the menu, make reservations, and learn about the restaurant\'s unique culinary offerings.',
-          'The project features a fully responsive design that works perfectly on all devices, from mobile phones to desktop computers. With built-in multilingual support, the website caters to both English and Polish-speaking customers, ensuring a welcoming experience for all visitors.',
-          'The website includes modern features such as smooth animations, interactive menu displays, and an intuitive reservation system. The clean, minimalist design puts the focus on the restaurant\'s culinary offerings while maintaining excellent performance and accessibility standards.'
+          'A modern, responsive restaurant website designed to strengthen brand presence and simplify day-to-day customer interactions. The project focuses on clear menu presentation, an easy-to-use reservation system, and an elegant, polished design. Optimized for both SEO and mobile devices, the site ensures accessibility and smooth navigation across all platforms.',
+            'The built-in content management system allows the restaurant owner to easily update the menu, business hours, or special offers — without relying on technical support.',
+             'The project is a strong example of combining aesthetics, functionality, and real business value for the hospitality industry.'
         ],
         testimonial: {
-          quote: 'The new website has significantly improved our online presence and made it much easier for customers to discover our restaurant. The multilingual support has been particularly valuable for our international clientele.',
-          author: 'Restaurant Owner',
-          role: 'Owner, Saffron & Thyme Restaurant'
+          quote: 'We aimed to design a website that combines a stylish look with practical features, helping restaurants attract guests and build a strong online presence.',
+          author: 'Our thoughts',
+          role: 'Vibbly team'
         },
         clientBenefits: {
-          title: 'Restaurant Benefits',
-          subtitle: 'How our website solution helps Saffron & Thyme Restaurant grow',
+          title: 'Benefits for Restaurants',
+          subtitle: 'Why a modern website helps grow your business and simplify daily operations',
           benefits: [
             {
-              icon: 'Search',
-              title: 'Enhanced Online Visibility',
-              description: 'Improved search engine rankings and social media presence help attract more customers to the restaurant.'
-            },
-            {
               icon: 'Users',
-              title: 'Streamlined Reservations',
-              description: 'The intuitive booking system reduces no-shows and makes table management more efficient.'
+              title: 'More Guests',
+              description: 'Improved online visibility and an easy booking system help bring in more customers – no phone calls needed.'
             },
             {
-              icon: 'Smartphone',
-              title: 'Mobile-First Experience',
-              description: 'Perfect display and functionality on all devices, ensuring customers can easily browse the menu and make reservations on the go.'
+              icon: 'LayoutGrid',
+              title: 'Perfect Online Business Card',
+              description: 'A modern, elegant website gives your restaurant a professional first impression that builds trust instantly.'
             },
             {
-              icon: 'Edit',
-              title: 'Easy Menu Updates',
-              description: 'Simple content management system allows quick updates to menus, special offers, and events.'
+              icon: 'Image',
+              title: 'Easy-to-Browse Menu & Gallery',
+              description: 'Your dishes, photos, and prices are always up to date and easy to access – on any device.'
             },
             {
-              icon: 'Shield',
-              title: 'Secure Booking System',
-              description: 'Protected reservation system ensures customer data safety and reliable booking management.'
+              icon: 'Settings',
+              title: 'Simple Management',
+              description: 'Quickly update your menu, hours, or offers with an easy-to-use system – no tech skills required.'
             },
             {
-              icon: 'Layout',
-              title: 'Brand Consistency',
-              description: 'Modern, elegant design that perfectly reflects the restaurant\'s sophisticated atmosphere and culinary style.'
+              icon: 'Clock',
+              title: 'Always Available',
+              description: 'Your website works 24/7, so customers can check the menu, opening hours, or make a reservation anytime – even when you’re closed.'
             }
           ]
-        }
+        }        
       },
       pl: {
         title: 'Restauracja Saffron & Thyme',
         description: 'Nowoczesna, responsywna strona restauracji z obsługą wielu języków, elegancką prezentacją menu i płynnym systemem rezerwacji',
-        category: 'Strona Restauracji',
+        category: 'Own project',
         fullDescription: [
-          'Saffron & Thyme to wyrafinowana strona internetowa restauracji, zaprojektowana tak, aby zapewnić gościom wyjątkowe wrażenia cyfrowe. Strona łączy elegancki design z praktyczną funkcjonalnością, ułatwiając klientom przeglądanie menu, dokonywanie rezerwacji i poznawanie unikalnej oferty kulinarnej restauracji.',
-          'Projekt charakteryzuje się w pełni responsywnym designem, który doskonale działa na wszystkich urządzeniach, od telefonów komórkowych po komputery stacjonarne. Dzięki wbudowanemu wsparciu dla wielu języków, strona obsługuje zarówno anglojęzycznych, jak i polskojęzycznych klientów, zapewniając przyjazne doświadczenie dla wszystkich odwiedzających.',
-          'Strona zawiera nowoczesne funkcje, takie jak płynne animacje, interaktywne wyświetlanie menu i intuicyjny system rezerwacji. Czysty, minimalistyczny design skupia uwagę na ofercie kulinarnej restauracji, jednocześnie utrzymując doskonałe standardy wydajności i dostępności.'
+         'Nowoczesna i responsywna strona internetowa dla restauracji, zaprojektowana z myślą o wzmocnieniu wizerunku marki oraz usprawnieniu codziennej obsługi klientów. Projekt skupia się na przejrzystej prezentacji menu, łatwym systemie rezerwacji oraz eleganckim, dopracowanym designie.',
+          'Strona została zoptymalizowana pod kątem SEO i użytkowników mobilnych, co zapewnia wysoką dostępność i intuicyjne korzystanie na wszystkich urządzeniach. System zarządzania treścią pozwala właścicielowi lokalu w prosty sposób aktualizować menu, godziny otwarcia czy oferty specjalne – bez potrzeby wsparcia technicznego.',
+          'Projekt stanowi przykład połączenia estetyki, funkcjonalności i realnej wartości biznesowej dla branży gastronomicznej.'
         ],
+
         testimonial: {
-          quote: 'Nowa strona znacząco poprawiła naszą obecność w internecie i znacznie ułatwiła klientom odkrycie naszej restauracji. Wsparcie dla wielu języków okazało się szczególnie cenne dla naszej międzynarodowej klienteli.',
-          author: 'Właściciel Restauracji',
-          role: 'Właściciel, Restauracja Saffron & Thyme'
+          quote: 'Chcieliśmy stworzyć stronę, która łączy elegancki wygląd z praktycznymi funkcjami, wspierając restaurację w przyciąganiu gości i budowaniu obecności online.',
+          author: 'Nasze przemyślenia',
+          role: 'Vibbly team'
         },
         clientBenefits: {
           title: 'Korzyści dla Restauracji',
-          subtitle: 'Jak nasze rozwiązanie pomaga rozwijać Restaurację Saffron & Thyme',
+          subtitle: 'Dlaczego nowoczesna strona to klucz do większej liczby gości i lepszego zarządzania lokalem',
           benefits: [
             {
-              icon: 'Search',
-              title: 'Lepsza Widoczność Online',
-              description: 'Ulepszone pozycje w wyszukiwarkach i obecność w mediach społecznościowych pomagają przyciągać więcej klientów do restauracji.'
-            },
-            {
               icon: 'Users',
-              title: 'Usprawnione Rezerwacje',
-              description: 'Intuicyjny system rezerwacji zmniejsza liczbę nieobecności i usprawnia zarządzanie stolikami.'
+              title: 'Więcej Gości',
+              description: 'Dzięki lepszej widoczności w internecie i wygodnemu systemowi rezerwacji przyciągniesz więcej klientów – bez zbędnych telefonów.'
             },
             {
-              icon: 'Smartphone',
-              title: 'Doświadczenie Mobile-First',
-              description: 'Doskonały wygląd i funkcjonalność na wszystkich urządzeniach, umożliwiając klientom łatwe przeglądanie menu i dokonywanie rezerwacji w podróży.'
+              icon: 'LayoutGrid',
+              title: 'Idealna Wizytówka Online',
+              description: 'Nowoczesna, estetyczna strona buduje profesjonalny wizerunek Twojej restauracji już przy pierwszym kliknięciu.'
             },
             {
-              icon: 'Edit',
-              title: 'Łatwe Aktualizacje Menu',
-              description: 'Prosty system zarządzania treścią pozwala na szybkie aktualizacje menu, ofert specjalnych i wydarzeń.'
+              icon: 'Image',
+              title: 'Menu i Galeria w Zasięgu Ręki',
+              description: 'Twoje dania, zdjęcia i ceny są zawsze aktualne i łatwo dostępne – na telefonie, tablecie czy komputerze.'
             },
             {
-              icon: 'Shield',
-              title: 'Bezpieczny System Rezerwacji',
-              description: 'Chroniony system rezerwacji zapewnia bezpieczeństwo danych klientów i niezawodne zarządzanie rezerwacjami.'
+              icon: 'Settings',
+              title: 'Łatwe Zarządzanie',
+              description: 'Prosty system pozwala Ci samodzielnie zmieniać menu, godziny otwarcia czy promocje – bez czekania na wsparcie techniczne.'
             },
             {
-              icon: 'Layout',
-              title: 'Spójność Marki',
-              description: 'Nowoczesny, elegancki design, który idealnie odzwierciedla wyrafinowaną atmosferę i styl kulinarny restauracji.'
-            }
+              icon: 'Clock',
+              title: 'Zawsze Dostępna',
+              description: 'Twoja strona działa 24/7 – klienci mogą sprawdzić menu, godziny otwarcia czy zarezerwować stolik o dowolnej porze, nawet gdy restauracja jest zamknięta.'
+            }            
           ]
-        }
+        }        
       }
     },
     portfolio: {
@@ -125,11 +116,11 @@ export const saffronThyme: Project = {
         '/projects/saffron-thyme/gallery-2.jpg',
         '/projects/saffron-thyme/gallery-3.jpg'
       ],
-      client: 'Saffron & Thyme Restaurant',
-      duration: '8 weeks',
-      year: '2024',
+      client: 'Own project',
+      duration: '4 days',
+      year: '2025',
       projectType: 'Restaurant Website',
-      projectUrl: 'https://saffron-thyme.com', // Replace with actual URL
+      projectUrl: 'https://saffron-thyme.netlify.app', // Replace with actual URL
       pageSpeedScores: createPageSpeedScores({
         'Performance': 90,
         'Accessibility': 95,
