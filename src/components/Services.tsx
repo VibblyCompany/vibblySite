@@ -1,11 +1,24 @@
 import React from 'react';
-import { Code, Paintbrush, BarChart } from 'lucide-react';
+import { Code, Paintbrush, BarChart, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Services: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate('/#contact');
+    setTimeout(() => {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   const services = [
     {
@@ -70,10 +83,23 @@ const Services: React.FC = () => {
         </div>
         
         <div className="mt-24 text-center">
-          <div className="inline-block p-1 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full">
-            <button className="bg-black/30 backdrop-blur-sm text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all duration-300">
-              {t.services.cta}
-            </button>
+          <motion.button
+            whileHover={{ scale: 1.02, y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            onClick={handleContactClick}
+            className="group relative inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white transition-all duration-300 ease-out bg-gradient-to-r from-violet-700/90 to-fuchsia-700/90 rounded-full border border-white/10 hover:border-white/20 shadow-xl hover:shadow-violet-900/20"
+          >
+            <span className="relative flex items-center gap-3">
+              {language === 'pl' ? 'Omów swój projekt' : 'Discuss your project'}
+              <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+            </span>
+          </motion.button>
+          <div className="mt-4 text-center">
+            <p className="text-sm text-gray-400">
+              {language === 'pl' 
+                ? 'Bezpłatna konsultacja i wycena w ciągu 24h' 
+                : 'Free consultation and quote within 24h'}
+            </p>
           </div>
         </div>
       </div>

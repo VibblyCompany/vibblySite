@@ -84,8 +84,21 @@ export const translations = {
       subtitle: "Ready to start your project? Reach out and let's discuss how we can bring your vision to life.",
       form: {
         name: "Your Name",
+        namePlaceholder: "John Doe",
         email: "Your Email",
+        emailPlaceholder: "john@example.com",
+        phone: "Phone Number",
+        phonePlaceholder: "+48 123 456 789",
+        company: "Company Name",
+        companyPlaceholder: "Your Company Ltd.",
+        subject: "Project Type",
+        subjectPlaceholder: "Select project type",
         message: "Your Message",
+        messagePlaceholder: "Tell us about your project...",
+        budget: "Budget Range",
+        budgetPlaceholder: "Select budget range",
+        timeline: "Timeline",
+        timelinePlaceholder: "Select timeline",
         submit: "Send Message"
       },
       schedule: {
@@ -100,7 +113,13 @@ export const translations = {
       },
       success: {
         title: "Message Sent!",
-        message: "Thank you for reaching out. We'll get back to you shortly."
+        message: "Thank you for reaching out. We'll get back to you within 24 hours."
+      },
+      response: {
+        title: "What to Expect",
+        point1: "We'll respond within 24 hours",
+        point2: "Free consultation and project assessment",
+        point3: "Detailed quote and timeline proposal"
       }
     },
     footer: {
@@ -257,8 +276,21 @@ export const translations = {
       subtitle: "Gotowy, aby rozpocząć swój projekt? Skontaktuj się, aby omówić, jak możemy pomóc w realizacji Twojej wizji.",
       form: {
         name: "Twoje Imię",
+        namePlaceholder: "Jan Kowalski",
         email: "Twój Email",
+        emailPlaceholder: "jan@przykład.pl",
+        phone: "Numer Telefonu",
+        phonePlaceholder: "+48 123 456 789",
+        company: "Nazwa Firmy",
+        companyPlaceholder: "Twoja Firma Sp. z o.o.",
+        subject: "Typ Projektu",
+        subjectPlaceholder: "Wybierz typ projektu",
         message: "Twoja Wiadomość",
+        messagePlaceholder: "Opowiedz nam o swoim projekcie...",
+        budget: "Budżet",
+        budgetPlaceholder: "Wybierz zakres budżetu",
+        timeline: "Harmonogram",
+        timelinePlaceholder: "Wybierz harmonogram",
         submit: "Wyślij Wiadomość"
       },
       schedule: {
@@ -273,7 +305,13 @@ export const translations = {
       },
       success: {
         title: "Wiadomość Wysłana!",
-        message: "Dziękujemy za kontakt. Odezwiemy się wkrótce."
+        message: "Dziękujemy za kontakt. Odpowiemy w ciągu 24 godzin."
+      },
+      response: {
+        title: "Czego Możesz Się Spodziewać",
+        point1: "Odpowiemy w ciągu 24 godzin",
+        point2: "Bezpłatna konsultacja i analiza projektu",
+        point3: "Szczegółowa wycena i propozycja harmonogramu"
       }
     },
     footer: {

@@ -3,11 +3,13 @@ import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const navigate = useNavigate();
+  const location = useLocation();
   
   const currentYear = new Date().getFullYear();
   
@@ -25,6 +27,23 @@ const Footer: React.FC = () => {
     { href: '/legal#cookies', label: language === 'pl' ? 'Polityka Cookies' : 'Cookie Policy' },
     { href: '/legal#gdpr', label: language === 'pl' ? 'RODO' : 'GDPR' }
   ];
+
+  const handleScrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
 
   return (
     <footer className="bg-violet-950 border-t border-violet-800/50">
@@ -58,17 +77,42 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">{t.footer.quickLinks.title}</h4>
             <ul className="space-y-3">
-              {t.footer.quickLinks.links.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    to="#" 
-                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center"
-                  >
-                    <span>{link}</span>
-                    <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <button 
+                  onClick={() => handleScrollToSection('about')}
+                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
+                >
+                  <span>{language === 'pl' ? 'O nas' : 'About'}</span>
+                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleScrollToSection('portfolio')}
+                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
+                >
+                  <span>{language === 'pl' ? 'Portfolio' : 'Portfolio'}</span>
+                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleScrollToSection('services')}
+                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
+                >
+                  <span>{language === 'pl' ? 'Usługi' : 'Services'}</span>
+                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleScrollToSection('contact')}
+                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
+                >
+                  <span>{language === 'pl' ? 'Kontakt' : 'Contact'}</span>
+                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                </button>
+              </li>
             </ul>
           </div>
           

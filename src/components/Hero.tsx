@@ -3,10 +3,24 @@ import { ChevronRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
 import ParticleBackground from './ParticleBackground';
+import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  const navigate = useNavigate();
+
+  const handleCTAClick = () => {
+    navigate('/#services');
+    // Płynne przewijanie do sekcji usług
+    setTimeout(() => {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -29,10 +43,17 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="animate-fade-in-up" style={{ animationDelay: '1.2s' }}>
-            <button className="group flex items-center bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/25 hover:scale-105">
-              {t.hero.cta}
-              <ChevronRight className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-            </button>
+            <motion.button
+              whileHover={{ scale: 1.02, y: -2 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={handleCTAClick}
+              className="group relative inline-flex items-center justify-center px-10 py-4 text-lg font-medium text-white transition-all duration-300 ease-out bg-gradient-to-r from-violet-700/90 to-fuchsia-700/90 rounded-full border border-white/10 hover:border-white/20 shadow-xl hover:shadow-violet-900/20"
+            >
+              <span className="relative flex items-center gap-3">
+                {language === 'pl' ? 'Zbudujmy Coś Razem' : 'Let\'s Build Something'}
+                <ChevronRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
+              </span>
+            </motion.button>
           </div>
         </div>
       </div>
