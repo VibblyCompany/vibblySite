@@ -15,7 +15,7 @@ export const saffronThyme: Project = {
       en: {
         title: 'Saffron & Thyme Restaurant',
         description: 'A modern, responsive restaurant website featuring an elegant menu presentation, and seamless reservation system',
-        category: 'Own project',
+        category: 'Restaurant website',
         fullDescription: [
           'A modern, responsive restaurant website designed to strengthen brand presence and simplify day-to-day customer interactions. The project focuses on clear menu presentation, an easy-to-use reservation system, and an elegant, polished design. Optimized for both SEO and mobile devices, the site ensures accessibility and smooth navigation across all platforms.',
             'The built-in content management system allows the restaurant owner to easily update the menu, business hours, or special offers — without relying on technical support.',
@@ -61,7 +61,7 @@ export const saffronThyme: Project = {
       pl: {
         title: 'Restauracja Saffron & Thyme',
         description: 'Nowoczesna, responsywna strona restauracji z obsługą wielu języków, elegancką prezentacją menu i płynnym systemem rezerwacji',
-        category: 'Own project',
+        category: 'Stona restauracji',
         fullDescription: [
          'Nowoczesna i responsywna strona internetowa dla restauracji, zaprojektowana z myślą o wzmocnieniu wizerunku marki oraz usprawnieniu codziennej obsługi klientów. Projekt skupia się na przejrzystej prezentacji menu, łatwym systemie rezerwacji oraz eleganckim, dopracowanym designie.',
           'Strona została zoptymalizowana pod kątem SEO i użytkowników mobilnych, co zapewnia wysoką dostępność i intuicyjne korzystanie na wszystkich urządzeniach.System zarządzania treścią pozwala właścicielowi lokalu w prosty sposób aktualizować menu, godziny otwarcia czy oferty specjalne – bez potrzeby wsparcia technicznego.',
