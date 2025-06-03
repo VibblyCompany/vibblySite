@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, Users, Smartphone, Edit, Shield, Layout, Image, Settings, Clock, Map, Globe, ShieldCheck, User, HelpCircle, HandCoins, Database, Puzzle } from 'lucide-react';
+import { Search, Users, Smartphone, Edit, Shield, Layout, Image, Settings, Clock, Map, Globe, ShieldCheck, User, HelpCircle, HandCoins, Database, Puzzle, Atom, FlaskConical, Hand, GraduationCap } from 'lucide-react';
 
 const iconComponents = {
   // PascalCase icons
@@ -22,13 +22,21 @@ const iconComponents = {
   HandCoins,
   Database,
   Puzzle,
+  Atom,
+  FlaskConical,
+  Hand,
+  GraduationCap,
   // kebab-case icons
   'shield-check': ShieldCheck,
   'user-friendly': User,
   'help-circle': HelpCircle,
   'hand-coins': HandCoins,
   'database': Database,
-  'puzzle': Puzzle
+  'puzzle': Puzzle,
+  'atom': Atom,
+  'flask-conical': FlaskConical,
+  'hand': Hand,
+  'graduation-cap': GraduationCap
 };
 
 interface ClientBenefitsProps {

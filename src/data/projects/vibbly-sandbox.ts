@@ -19,7 +19,7 @@ export const vibblySandbox: Project = {
         'The application features a responsive canvas that adapts to different screen sizes, real-time physics calculations, and smooth element interactions. Users can add, remove, and manipulate elements while observing realistic physics-based behaviors such as gravity, friction, and collisions.'
       ],
       testimonial: {
-        quote: 'This project was a blend of technical challenge and real-world impact — we wanted every part to have purpose and value.',
+        quote: 'This project was driven by our fascination with the complexity of nature — we aimed to capture that beauty through code, where every interaction feels alive and intentional.',
         author: 'Vibbly team',
         role: 'Our thoughts'
       },
@@ -28,22 +28,22 @@ export const vibblySandbox: Project = {
         subtitle: 'Advanced Physics Simulation Capabilities',
         benefits: [
           {
-            icon: 'education-icon',
+            icon: 'atom',
             title: 'Learn the Basics of Physics',
             description: 'Users explore gravity, friction, and collisions through interactive simulations powered by the Matter.js engine'
           },
           {
-            icon: 'experiment-icon',
+            icon: 'flask-conical',
             title: 'Experiment with Materials',
             description: 'Understand the behavior of different substances like water, oil, wood, and metal in a virtual environment'
           },
           {
-            icon: 'hands-on-icon',
+            icon: 'hand',
             title: 'Hands-On, Interactive Learning',
             description: 'Realistic interactions and behaviors allow for active learning through experimentation and observation'
           },
           {
-            icon: 'efficiency-icon',
+            icon: 'graduation-cap',
             title: 'Smooth Educational Experience',
             description: 'Optimized performance ensures a seamless environment for exploring and understanding physical phenomena'
           }
@@ -59,7 +59,7 @@ export const vibblySandbox: Project = {
         'Aplikacja zawiera responsywne płótno dostosowujące się do różnych rozmiarów ekranu, obliczenia fizyczne w czasie rzeczywistym oraz płynne interakcje elementów. Użytkownicy mogą dodawać, usuwać i manipulować elementami, obserwując realistyczne zachowania oparte na fizyce, takie jak grawitacja, tarcie i kolizje.'
       ],
       testimonial: {
-        quote: 'Ten projekt to połączenie technicznych wyzwań i realnego wpływu — chcieliśmy, aby każda część miała cel i wartość.',
+        quote: 'Ten projekt zrodził się z fascynacji złożonością natury — chcieliśmy oddać jej piękno w kodzie, gdzie każda interakcja jest żywa i celowa.',
         author: 'Zespół Vibbly',
         role: 'Nasze przemyślenia'
       },
@@ -68,22 +68,22 @@ export const vibblySandbox: Project = {
         subtitle: 'Zaawansowane Możliwości Symulacji Fizycznej',
         benefits: [
           {
-            icon: 'education-icon',
+            icon: 'atom',
             title: 'Nauka Podstaw Fizyki',
             description: 'Użytkownicy uczą się zasad grawitacji, tarcia i kolizji poprzez interaktywną symulację opartą na silniku Matter.js'
           },
           {
-            icon: 'experiment-icon',
+            icon: 'flask-conical',
             title: 'Eksperymentowanie z Materiałami',
             description: 'Poznawanie właściwości różnych substancji, takich jak woda, olej, drewno czy metal, w kontrolowanych warunkach'
           },
           {
-            icon: 'hands-on-icon',
+            icon: 'hand',
             title: 'Aktywna Nauka Poprzez Interakcję',
             description: 'Realistyczne reakcje i zachowania elementów pozwalają na naukę przez działanie i obserwację'
           },
           {
-            icon: 'efficiency-icon',
+            icon: 'graduation-cap',
             title: 'Płynne Doświadczenie Edukacyjne',
             description: 'Zoptymalizowana wydajność zapewnia komfortowe środowisko do nauki i testowania zjawisk fizycznych'
           }
@@ -101,7 +101,7 @@ export const vibblySandbox: Project = {
       mainPageImage,
       mainPageImage
     ],
-    client: 'Educational Technology Department',
+    client: 'Vibbly',
     duration: {
       en: '3 days',
       pl: '3 dni'
