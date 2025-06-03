@@ -22,8 +22,8 @@ export const bilinq: Project = {
         ],
         testimonial: {
           quote: 'This project was a blend of technical challenge and real-world impact — we wanted every part to have purpose and value.',
-          author: 'Our thoughts',
-          role: 'Vibbly team'
+          author: 'Vibbly team',
+          role: 'Our thoughts'
         },
         clientBenefits: {
           title: 'Client Benefits',

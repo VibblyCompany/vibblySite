@@ -2,12 +2,14 @@ import { Project } from './types';
 import { saffronThyme } from './saffron-thyme';
 import { safetripvax } from './safetripvax';
 import { bilinq } from './bilinq';
+import { vibblySandbox } from './vibbly-sandbox';
 
 // Export all projects
 export const projects: Project[] = [
   saffronThyme,
   safetripvax,
-  bilinq
+  bilinq,
+  vibblySandbox
 ];
 
 // Helper functions

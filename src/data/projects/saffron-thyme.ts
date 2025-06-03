@@ -23,8 +23,8 @@ export const saffronThyme: Project = {
         ],
         testimonial: {
           quote: 'We aimed to design a website that combines a stylish look with practical features, helping restaurants attract guests and build a strong online presence.',
-          author: 'Our thoughts',
-          role: 'Vibbly team'
+          author: 'Vibbly team',
+          role: 'Our thoughts'
         },
         clientBenefits: {
           title: 'Benefits for Restaurants',
@@ -53,7 +53,7 @@ export const saffronThyme: Project = {
             {
               icon: 'Clock',
               title: 'Always Available',
-              description: 'Your website works 24/7, so customers can check the menu, opening hours, or make a reservation anytime – even when you’re closed.'
+              description: 'Your website works 24/7, so customers can check the menu, opening hours, or make a reservation anytime – even when you\'re closed.'
             }
           ]
         }        
@@ -70,8 +70,8 @@ export const saffronThyme: Project = {
 
         testimonial: {
           quote: 'Chcieliśmy stworzyć stronę, która łączy elegancki wygląd z praktycznymi funkcjami, wspierając restaurację w przyciąganiu gości i budowaniu obecności online.',
-          author: 'Nasze przemyślenia',
-          role: 'Vibbly team'
+          author: 'Zespół Vibbly',
+          role: 'Nasze przemyślenia'
         },
         clientBenefits: {
           title: 'Korzyści dla Restauracji',
