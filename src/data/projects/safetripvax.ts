@@ -119,7 +119,10 @@ export const safetripvax: Project = {
       'URL to gallery image 3'
     ],
     client: 'EPKO sp. z o.o.',
-    duration: '2 weeks',
+    duration: {
+      en: '2 weeks',
+      pl: '2 tygodnie'
+    },
     year: '2025', // e.g., '2024'
     projectUrl: 'https://safetripvax.com/',
     pageSpeedScores: createPageSpeedScores({

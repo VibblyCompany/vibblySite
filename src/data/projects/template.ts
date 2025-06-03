@@ -82,18 +82,25 @@ export const projectTemplate: Project = {
       'URL to gallery image 3'
     ],
     client: 'Client Name',
-    duration: 'Project Duration', // e.g., '12 weeks'
-    year: 'Project Year', // e.g., '2024'
-    projectType: {
-      en: 'Project Type', // e.g., 'Web Application'
-      pl: 'Typ Projektu' // e.g., 'Aplikacja Webowa'
+    duration: {
+      en: 'Project Duration', // e.g., '12 weeks'
+      pl: 'Czas Trwania Projektu' // e.g., '12 tygodni'
     },
+    year: 'Project Year', // e.g., '2024'
     projectUrl: 'https://example.com',
     pageSpeedScores: createPageSpeedScores({
-      'Performance': 0,
-      'Accessibility': 0,
-      'Best Practices': 0,
-      'SEO': 0
+      mobile: {
+        'Performance': 0,
+        'Accessibility': 0,
+        'Best Practices': 0,
+        'SEO': 0
+      },
+      desktop: {
+        'Performance': 0,
+        'Accessibility': 0,
+        'Best Practices': 0,
+        'SEO': 0
+      }
     }),
     pageSpeedUrl: 'https://pagespeed.web.dev/'
   }

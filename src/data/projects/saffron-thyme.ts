@@ -116,8 +116,11 @@ export const saffronThyme: Project = {
         '/projects/saffron-thyme/gallery-2.jpg',
         '/projects/saffron-thyme/gallery-3.jpg'
       ],
-      client: 'Own project',
-      duration: '4 days',
+      client: 'Vibbly',
+      duration: {
+        en: '4 days',
+        pl: '4 dni'
+      },
       year: '2025',
       projectUrl: 'https://saffron-thyme.netlify.app', // Replace with actual URL
 

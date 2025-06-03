@@ -114,8 +114,11 @@ export const bilinq: Project = {
       'URL to gallery image 2',
       'URL to gallery image 3'
     ],
-    client: 'Own project',
-    duration: '5 days',
+    client: 'Vibbly',
+    duration: {
+      en: '5 days',
+      pl: '5 dni'
+    },
     year: '2025', // e.g., '2024'
     projectUrl: 'https://bilinq.netlify.app',
     pageSpeedScores: createPageSpeedScores({

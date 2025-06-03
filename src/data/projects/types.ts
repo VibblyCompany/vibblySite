@@ -53,7 +53,10 @@ export interface Project {
     image: string;
     gallery: string[];
     client: string;
-    duration: string;
+    duration: {
+      en: string;
+      pl: string;
+    };
     year: string;
     projectUrl: string;
     pageSpeedScores: PageSpeedScores;
@@ -165,7 +168,7 @@ export const getProjectPageData = (projects: Project[], id: string, language: 'e
     clientBenefits: translations.clientBenefits,
     image: project.projectPage.image,
     gallery: project.projectPage.gallery,
-    duration: project.projectPage.duration,
+    duration: project.projectPage.duration[language],
     year: project.projectPage.year,
     client: project.projectPage.client,
     projectUrl: project.projectPage.projectUrl,
