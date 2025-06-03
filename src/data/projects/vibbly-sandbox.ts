@@ -107,7 +107,7 @@ export const vibblySandbox: Project = {
       pl: '3 dni'
     },
     year: '2025',
-    projectUrl: 'https://sanbdox.netlify.app',
+    projectUrl: 'https://vibblab.netlify.app/',
     pageSpeedScores: createPageSpeedScores({
       mobile: {
         'Performance': 98,
