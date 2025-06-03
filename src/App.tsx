@@ -9,6 +9,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';
+import LegalDocuments from './components/LegalDocuments';
 import ParticleBackground from './components/ParticleBackground';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
                 </main>
               } />
               <Route path="/portfolio/:id" element={<ProjectPage />} />
+              <Route path="/legal" element={<LegalDocuments />} />
             </Routes>
             <Footer />
           </div>

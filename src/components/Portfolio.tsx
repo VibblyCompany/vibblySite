@@ -6,14 +6,6 @@ import { motion } from 'framer-motion';
 import { getPortfolioProjects } from '../data/projects';
 import { translations } from '../utils/translations';
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  image: string;
-}
-
 const Portfolio: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language].portfolio;

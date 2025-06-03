@@ -2,6 +2,8 @@ import React from 'react';
 import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
+import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const { language } = useLanguage();
@@ -15,6 +17,13 @@ const Footer: React.FC = () => {
     { icon: <Instagram className="w-5 h-5" />, href: "#" },
     { icon: <Linkedin className="w-5 h-5" />, href: "#" },
     { icon: <Github className="w-5 h-5" />, href: "#" },
+  ];
+
+  const legalLinks = [
+    { href: '/legal#terms', label: language === 'pl' ? 'Warunki Korzystania' : 'Terms of Service' },
+    { href: '/legal#privacy', label: language === 'pl' ? 'Polityka Prywatności' : 'Privacy Policy' },
+    { href: '/legal#cookies', label: language === 'pl' ? 'Polityka Cookies' : 'Cookie Policy' },
+    { href: '/legal#gdpr', label: language === 'pl' ? 'RODO' : 'GDPR' }
   ];
 
   return (
@@ -51,9 +60,13 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               {t.footer.quickLinks.links.map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-300">
-                    {link}
-                  </a>
+                  <Link 
+                    to="#" 
+                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center"
+                  >
+                    <span>{link}</span>
+                    <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -63,11 +76,15 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-6">{t.footer.legal.title}</h4>
             <ul className="space-y-3">
-              {t.footer.legal.links.map((link, index) => (
-                <li key={index}>
-                  <a href="#" className="text-gray-400 hover:text-violet-400 transition-colors duration-300">
-                    {link}
-                  </a>
+              {legalLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    to={link.href}
+                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center"
+                  >
+                    <span>{link.label}</span>
+                    <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -79,12 +96,20 @@ const Footer: React.FC = () => {
             © {currentYear} Vibbly. {t.footer.rights}
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300">
-              {t.footer.terms}
-            </a>
-            <a href="#" className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300">
-              {t.footer.privacy}
-            </a>
+            <Link 
+              to="/legal#terms" 
+              className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300 group flex items-center"
+            >
+              <span>{t.footer.terms}</span>
+              <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+            </Link>
+            <Link 
+              to="/legal#privacy" 
+              className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300 group flex items-center"
+            >
+              <span>{t.footer.privacy}</span>
+              <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+            </Link>
           </div>
         </div>
       </div>
