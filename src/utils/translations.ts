@@ -35,8 +35,8 @@ export const translations = {
         description2: "Our mission is to deliver beautiful and effective websites fast, efficiently, and at a reasonable cost."
       },
       quote: "We don't just build websites and apps. We create digital experiences that tell stories, solve problems, and spark meaningful connections.",
-      quoteAuthor: "Aleksander Kowalski",
-      quoteRole: "Founder & CEO"
+      quoteAuthor: "Dawid & Igor",
+      quoteRole: "Founders & CEOs"
     },
     portfolio: {
       title: "Our Projects",
@@ -132,16 +132,17 @@ export const translations = {
           "Services",
           "Portfolio",
           "Careers",
-          "Blog"
+          "Blog",
+          "Sitemap"
         ]
       },
       legal: {
         title: "Legal",
         links: [
-          "Terms of Service",
-          "Privacy Policy",
-          "Cookie Policy",
-          "GDPR Compliance"
+          { label: "Terms of Service", href: '/legal#terms' },
+          { label: "Privacy Policy", href: '/legal#privacy' },
+          { label: "Cookie Policy", href: '/legal#cookies' },
+          { label: "GDPR Compliance", href: '/legal#gdpr' }
         ]
       },
       rights: "All rights reserved.",
@@ -227,8 +228,8 @@ export const translations = {
         description2: "Nasza misja to dostarczać efektowne i skuteczne strony www szybko, sprawnie i w rozsądnej cenie."
       },
       quote: "Nie tylko budujemy strony internetowe i aplikacje. Tworzymy cyfrowe doświadczenia, które opowiadają historie, rozwiązują problemy i tworzą znaczące połączenia.",
-      quoteAuthor: "Aleksander Kowalski",
-      quoteRole: "Założyciel i CEO"
+      quoteAuthor: "Dawid & Igor",
+      quoteRole: "Założyciele i CEO"
     },
     portfolio: {
       title: "Nasze Projekty",
@@ -324,16 +325,17 @@ export const translations = {
           "Usługi",
           "Portfolio",
           "Kariera",
-          "Blog"
+          "Blog",
+          "Mapa Witryny"
         ]
       },
       legal: {
         title: "Informacje Prawne",
         links: [
-          "Warunki Korzystania z Usług",
-          "Polityka Prywatności",
-          "Polityka Cookies",
-          "Zgodność z RODO"
+          { label: "Warunki Korzystania z Usług", href: '/legal#terms' },
+          { label: "Polityka Prywatności", href: '/legal#privacy' },
+          { label: "Polityka Cookies", href: '/legal#cookies' },
+          { label: "Zgodność z RODO", href: '/legal#gdpr' }
         ]
       },
       rights: "Wszelkie prawa zastrzeżone.",

@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';
 import LegalDocuments from './components/LegalDocuments';
+import Sitemap from './components/Sitemap';
 import ParticleBackground from './components/ParticleBackground';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               } />
               <Route path="/portfolio/:id" element={<ProjectPage />} />
               <Route path="/legal" element={<LegalDocuments />} />
+              <Route path="/sitemap" element={<Sitemap />} />
             </Routes>
             <Footer />
           </div>

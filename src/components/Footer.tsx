@@ -28,6 +28,15 @@ const Footer: React.FC = () => {
     { href: '/legal#gdpr', label: language === 'pl' ? 'RODO' : 'GDPR' }
   ];
 
+  const quickLinks = [
+    { name: t.nav.home, href: '/#home' },
+    { name: t.nav.about, href: '/#about' },
+    { name: t.nav.portfolio, href: '/#portfolio' },
+    { name: t.nav.services, href: '/#services' },
+    { name: t.nav.contact, href: '/#contact' },
+    { name: language === 'pl' ? 'Mapa Witryny' : 'Sitemap', href: '/sitemap.xml' }
+  ];
+
   const handleScrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
       navigate('/');
@@ -74,45 +83,26 @@ const Footer: React.FC = () => {
           </div>
           
           {/* Quick links */}
-          <div>
-            <h4 className="text-white font-semibold mb-6">{t.footer.quickLinks.title}</h4>
-            <ul className="space-y-3">
-              <li>
-                <button 
-                  onClick={() => handleScrollToSection('about')}
-                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
-                >
-                  <span>{language === 'pl' ? 'O nas' : 'About'}</span>
-                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleScrollToSection('portfolio')}
-                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
-                >
-                  <span>{language === 'pl' ? 'Portfolio' : 'Portfolio'}</span>
-                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleScrollToSection('services')}
-                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
-                >
-                  <span>{language === 'pl' ? 'Usługi' : 'Services'}</span>
-                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-                </button>
-              </li>
-              <li>
-                <button 
-                  onClick={() => handleScrollToSection('contact')}
-                  className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center w-full text-left"
-                >
-                  <span>{language === 'pl' ? 'Kontakt' : 'Contact'}</span>
-                  <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-                </button>
-              </li>
+          <div className="space-y-4">
+            <h3 className="text-white font-semibold mb-4">{t.footer.quickLinks.title}</h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    onClick={(e) => {
+                      if (link.href.startsWith('/#')) {
+                        e.preventDefault();
+                        handleScrollToSection(link.href.substring(2));
+                      }
+                    }}
+                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center"
+                  >
+                    <span>{link.name}</span>
+                    <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           
