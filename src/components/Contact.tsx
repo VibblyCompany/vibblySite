@@ -116,13 +116,12 @@ const Contact: React.FC = () => {
         timeline: formData.timeline || (language === 'pl' ? 'Nie określono' : 'Not specified'),
         to_name: 'Vibbly Team',
         reply_to: formData.email,
-        lang: language
       };
 
       // Przygotowanie parametrów dla auto-reply do klienta
       const autoReplyParams = {
         from_name: 'Vibbly Team',
-        from_email: 'vibbly.contact@gmail.com',
+        from_email: formData.email,
         to_email: formData.email,
         to_name: formData.name,
         phone: formData.phone || (language === 'pl' ? 'Nie podano' : 'Not provided'),
@@ -132,7 +131,6 @@ const Contact: React.FC = () => {
         budget: formData.budget || (language === 'pl' ? 'Nie określono' : 'Not specified'),
         timeline: formData.timeline || (language === 'pl' ? 'Nie określono' : 'Not specified'),
         reply_to: 'vibbly.contact@gmail.com',
-        lang: language
       };
 
       // Wysyłanie powiadomienia do zespołu
