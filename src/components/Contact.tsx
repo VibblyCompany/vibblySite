@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, Calendar, CheckCircle, AlertCircle, Loader2, Phone, Mail, MapPin, ChevronDown } from 'lucide-react';
+import { Send, Calendar, CheckCircle, AlertCircle, Loader2, Phone, Mail, MapPin, ChevronDown, ChevronRight, Copy, Check } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -53,6 +53,7 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [isCopied, setIsCopied] = useState(false);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -182,6 +183,12 @@ const Contact: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const handleCopyNumber = () => {
+    navigator.clipboard.writeText('+48123456789');
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 2000);
   };
 
   // Custom select component for better styling
@@ -498,15 +505,61 @@ const Contact: React.FC = () => {
             className="space-y-8"
           >
             <div className="bg-black/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">
-              <h3 className="text-xl font-semibold text-white mb-6">{t.contact.schedule.title}</h3>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center bg-violet-600/20 border border-violet-500/30 text-violet-300 py-3 px-6 rounded-lg font-medium hover:bg-violet-600/30 transition-all duration-300"
-              >
-                <Calendar className="mr-2 w-5 h-5" />
-                {t.contact.schedule.button}
-              </motion.button>
+              <h3 className="text-xl font-semibold text-white mb-4">
+                {language === 'pl' ? 'Zapraszamy do Kontaktu' : 'Get in Touch'}
+              </h3>
+              <p className="text-gray-400 mb-6">
+                {language === 'pl' 
+                  ? 'Jesteśmy dostępni od poniedziałku do piątku w godzinach 9:00-17:00. Zadzwoń do nas, aby omówić Twój projekt lub zadać pytania. Nasz zespół jest gotowy, aby pomóc Ci w realizacji Twoich celów.'
+                  : 'We are available Monday to Friday, 9:00 AM - 5:00 PM. Call us to discuss your project or ask any questions. Our team is ready to help you achieve your goals.'}
+              </p>
+              <div className="flex items-center justify-between bg-violet-600/20 border border-violet-500/30 rounded-lg p-4">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 rounded-lg bg-violet-600/30">
+                    <Phone className="w-5 h-5 text-violet-400" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-400">
+                      {language === 'pl' ? 'Zadzwoń lub skopiuj numer' : 'Call or copy number'}
+                    </p>
+                    <div className="flex items-center gap-2">
+                      <a 
+                        href="tel:+48123456789" 
+                        className="text-lg font-semibold text-violet-400 hover:text-violet-300 transition-colors duration-300"
+                      >
+                        +48 123 456 789
+                      </a>
+                      <motion.button
+                        onClick={handleCopyNumber}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="p-1.5 rounded-lg bg-violet-600/30 hover:bg-violet-600/40 transition-colors duration-300"
+                        title={language === 'pl' ? 'Kopiuj numer' : 'Copy number'}
+                      >
+                        {isCopied ? (
+                          <Check className="w-4 h-4 text-green-400" />
+                        ) : (
+                          <Copy className="w-4 h-4 text-violet-400" />
+                        )}
+                      </motion.button>
+                    </div>
+                  </div>
+                </div>
+                <motion.a
+                  href="tel:+48123456789"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="hidden md:flex items-center gap-2 px-4 py-2 bg-violet-600/30 hover:bg-violet-600/40 rounded-lg text-violet-400 transition-colors duration-300"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>{language === 'pl' ? 'Zadzwoń' : 'Call'}</span>
+                </motion.a>
+              </div>
+              <p className="mt-4 text-sm text-gray-500">
+                {language === 'pl'
+                  ? 'Nie czekaj - pierwsza konsultacja jest bezpłatna i niezobowiązująca.'
+                  : 'Don\'t wait - first consultation is free and non-binding.'}
+              </p>
             </div>
             
             <div className="bg-black/30 backdrop-blur-sm border border-gray-800/50 rounded-2xl p-8">

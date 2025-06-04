@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language];
   const location = useLocation();
+  const navigate = useNavigate();
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   
   const navLinks = [
-    { name: t.nav.home, href: '/#home' },
+    { name: t.nav.home, href: '/#hero' },
     { name: t.nav.about, href: '/#about' },
     { name: t.nav.portfolio, href: '/#portfolio' },
     { name: t.nav.services, href: '/#services' },
@@ -37,8 +38,30 @@ const Navbar: React.FC = () => {
 
   const handleNavClick = (href: string) => {
     setIsMenuOpen(false);
+    if (href.startsWith('/#')) {
+      const sectionId = href.substring(2);
+      if (location.pathname !== '/') {
+        navigate(`/#${sectionId}`);
+      } else {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    } else {
+      navigate(href);
+    }
+  };
+
+  const handleCTAClick = () => {
+    setIsMenuOpen(false);
     if (location.pathname !== '/') {
-      window.location.href = href;
+      navigate('/#contact');
+    } else {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -60,14 +83,13 @@ const Navbar: React.FC = () => {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link, index) => (
-            <a
+            <button
               key={index}
-              href={link.href}
               onClick={() => handleNavClick(link.href)}
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
               {link.name}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -80,7 +102,10 @@ const Navbar: React.FC = () => {
             {language === 'en' ? 'PL' : 'EN'}
           </button>
           
-          <button className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300">
+          <button 
+            onClick={handleCTAClick}
+            className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-violet-500/25 transition-all duration-300"
+          >
             {t.nav.cta}
           </button>
         </div>
@@ -95,22 +120,19 @@ const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile menu */}
-      <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? 'max-h-screen py-6' : 'max-h-0'
-        }`}
-      >
+      <div className={`md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg transition-all duration-300 overflow-hidden ${
+        isMenuOpen ? 'max-h-screen py-6' : 'max-h-0'
+      }`}>
         <div className="px-6 space-y-6">
           <nav className="flex flex-col space-y-4">
             {navLinks.map((link, index) => (
-              <a
+              <button
                 key={index}
-                href={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                className="text-gray-300 hover:text-white transition-colors duration-300 py-2 text-left"
               >
                 {link.name}
-              </a>
+              </button>
             ))}
           </nav>
           
@@ -123,8 +145,8 @@ const Navbar: React.FC = () => {
             </button>
             
             <button 
+              onClick={handleCTAClick}
               className="bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white px-4 py-2 rounded-lg"
-              onClick={() => setIsMenuOpen(false)}
             >
               {t.nav.cta}
             </button>

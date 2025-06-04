@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../utils/translations';
-import { ChevronRight, Home, Info, Briefcase, Code, Scale, FileText } from 'lucide-react';
+import { ChevronRight, Home, Info, Briefcase, Code, Scale, FileText, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const UserSitemap: React.FC = () => {
@@ -12,9 +12,15 @@ const UserSitemap: React.FC = () => {
   const location = useLocation();
 
   const mainPages = [
-    { name: t.nav.home, href: '/#home', icon: <Home className="w-5 h-5 text-violet-400" /> },
+    { name: t.nav.home, href: '/#hero', icon: <Home className="w-5 h-5 text-violet-400" /> },
     { name: t.nav.about, href: '/#about', icon: <Info className="w-5 h-5 text-violet-400" /> },
     { name: t.nav.contact, href: '/#contact', icon: <Briefcase className="w-5 h-5 text-violet-400" /> },
+    { 
+      name: t.nav.cta, 
+      href: '/#contact', 
+      icon: <Phone className="w-5 h-5 text-violet-400" />,
+      className: "bg-violet-600/20 hover:bg-violet-600/30 border border-violet-500/30"
+    },
   ];
 
   const services = [
@@ -36,13 +42,7 @@ const UserSitemap: React.FC = () => {
     if (href.startsWith('/#')) {
       const sectionId = href.substring(2);
       if (location.pathname !== '/') {
-        navigate('/');
-        setTimeout(() => {
-          const section = document.getElementById(sectionId);
-          if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 100);
+        navigate(`/#${sectionId}`);
       } else {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -101,7 +101,7 @@ const UserSitemap: React.FC = () => {
                 <li key={index}>
                   <button
                     onClick={() => handleLinkClick(page.href)}
-                    className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group w-full text-left"
+                    className={`text-gray-300 hover:text-white transition-colors duration-300 flex items-center group w-full text-left p-2 rounded-lg ${page.className || ''}`}
                   >
                     <div className="mr-3">{page.icon}</div>
                     <span className="relative">
