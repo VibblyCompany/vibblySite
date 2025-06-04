@@ -32,32 +32,74 @@ const HashHandler: React.FC = () => {
   return null;
 };
 
+// Container component for consistent spacing
+const Container: React.FC<{ children: React.ReactNode, className?: string }> = ({ children, className = '' }) => (
+  <div className={`w-full max-w-full mx-auto px-4 sm:px-6 md:px-16 overflow-x-hidden ${className}`}>
+    {children}
+  </div>
+);
+
+// Section component for consistent spacing
+const Section: React.FC<{ children: React.ReactNode, id?: string, className?: string }> = ({ children, id, className = '' }) => (
+  <section id={id} className={`w-full max-w-[100vw] py-12 sm:py-16 md:py-20 overflow-x-hidden ${className}`}>
+    <Container>
+      {children}
+    </Container>
+  </section>
+);
+
 // Główny komponent aplikacji
 const AppContent: React.FC = () => {
   return (
-    <div className="relative min-h-screen bg-black text-white">
+    <div className="relative min-h-screen w-full max-w-[100vw] bg-black text-white overflow-x-hidden">
       {/* Single global particle background with cursor effect */}
       <ParticleBackground density="high" fadeDirection="down" />
       
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 w-full max-w-[100vw] overflow-x-hidden">
         <HashHandler />
         <Navbar />
         <Routes>
           <Route path="/" element={
-            <main>
-              <section id="hero">
+            <main className="w-full max-w-[100vw] pt-16 md:pt-20 overflow-x-hidden">
+              <Section id="hero" className="min-h-[calc(100vh-4rem)] pb-0">
                 <Hero />
-              </section>
-              <About />
-              <Portfolio />
-              <Services />
-              <Contact />
+              </Section>
+              <Section id="about" className="pt-8 sm:pt-12 md:pt-16">
+                <About />
+              </Section>
+              <Section id="portfolio">
+                <Portfolio />
+              </Section>
+              <Section id="services">
+                <Services />
+              </Section>
+              <Section id="contact">
+                <Contact />
+              </Section>
             </main>
           } />
-          <Route path="/portfolio/:id" element={<ProjectPage />} />
-          <Route path="/legal" element={<LegalDocuments />} />
-          <Route path="/sitemap" element={<UserSitemap />} />
+          <Route path="/portfolio/:id" element={
+            <main className="w-full max-w-[100vw] pt-16 md:pt-20 overflow-x-hidden">
+              <Section>
+                <ProjectPage />
+              </Section>
+            </main>
+          } />
+          <Route path="/legal" element={
+            <main className="w-full max-w-[100vw] pt-16 md:pt-20 overflow-x-hidden">
+              <Section>
+                <LegalDocuments />
+              </Section>
+            </main>
+          } />
+          <Route path="/sitemap" element={
+            <main className="w-full max-w-[100vw] pt-16 md:pt-20 overflow-x-hidden">
+              <Section>
+                <UserSitemap />
+              </Section>
+            </main>
+          } />
         </Routes>
         <Footer />
       </div>

@@ -57,9 +57,10 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-violet-950 border-t border-violet-800/50">
       <div className="max-w-7xl mx-auto px-6 md:px-16 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          {/* Logo and description */}
-          <div className="md:col-span-2">
+        {/* Main footer content */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+          {/* Logo and description - full width on mobile */}
+          <div className="col-span-2 md:col-span-2">
             <div className="flex items-center mb-6">
               <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-violet-600 to-fuchsia-600 flex items-center justify-center text-white font-bold text-xl mr-3">
                 V
@@ -83,9 +84,9 @@ const Footer: React.FC = () => {
           </div>
           
           {/* Quick links */}
-          <div className="space-y-4">
-            <h3 className="text-white font-semibold mb-4">{t.footer.quickLinks.title}</h3>
-            <ul className="space-y-2">
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-sm sm:text-base">{t.footer.quickLinks.title}</h3>
+            <ul className="space-y-1">
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <a
@@ -96,10 +97,10 @@ const Footer: React.FC = () => {
                         handleScrollToSection(link.href.substring(2));
                       }
                     }}
-                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center"
+                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center text-xs sm:text-sm"
                   >
                     <span>{link.name}</span>
-                    <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                    <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
                   </a>
                 </li>
               ))}
@@ -108,16 +109,16 @@ const Footer: React.FC = () => {
           
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-6">{t.footer.legal.title}</h4>
-            <ul className="space-y-3">
+            <h4 className="text-white font-semibold mb-4 text-sm sm:text-base">{t.footer.legal.title}</h4>
+            <ul className="space-y-1">
               {legalLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center"
+                    className="text-gray-400 hover:text-violet-400 transition-colors duration-300 group flex items-center text-xs sm:text-sm"
                   >
                     <span>{link.label}</span>
-                    <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                    <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
                   </Link>
                 </li>
               ))}
@@ -125,25 +126,28 @@ const Footer: React.FC = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            © {currentYear} Vibbly. {t.footer.rights}
-          </p>
-          <div className="flex space-x-6">
-            <Link 
-              to="/legal#terms" 
-              className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300 group flex items-center"
-            >
-              <span>{t.footer.terms}</span>
-              <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-            </Link>
-            <Link 
-              to="/legal#privacy" 
-              className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300 group flex items-center"
-            >
-              <span>{t.footer.privacy}</span>
-              <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
-            </Link>
+        {/* Bottom footer */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
+            <p className="text-gray-500 text-sm text-center sm:text-left">
+              © {currentYear} Vibbly. {t.footer.rights}
+            </p>
+            <div className="flex space-x-6 justify-center sm:justify-end">
+              <Link 
+                to="/legal#terms" 
+                className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300 group flex items-center"
+              >
+                <span>{t.footer.terms}</span>
+                <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+              </Link>
+              <Link 
+                to="/legal#privacy" 
+                className="text-gray-500 hover:text-violet-400 text-sm transition-colors duration-300 group flex items-center"
+              >
+                <span>{t.footer.privacy}</span>
+                <ChevronRight className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+              </Link>
+            </div>
           </div>
         </div>
       </div>

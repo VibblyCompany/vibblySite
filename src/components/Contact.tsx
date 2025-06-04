@@ -520,7 +520,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">
-                      {language === 'pl' ? 'Zadzwoń lub skopiuj numer' : 'Call or copy number'}
+                      {language === 'pl' ? 'Zadzwoń do nas' : 'Call us'}
                     </p>
                     <div className="flex items-center gap-2">
                       <a 
@@ -533,7 +533,7 @@ const Contact: React.FC = () => {
                         onClick={handleCopyNumber}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="p-1.5 rounded-lg bg-violet-600/30 hover:bg-violet-600/40 transition-colors duration-300"
+                        className="hidden md:block p-1.5 rounded-lg bg-violet-600/30 hover:bg-violet-600/40 transition-colors duration-300"
                         title={language === 'pl' ? 'Kopiuj numer' : 'Copy number'}
                       >
                         {isCopied ? (
