@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
     { name: t.nav.portfolio, href: '/#portfolio' },
     { name: t.nav.services, href: '/#services' },
     { name: t.nav.contact, href: '/#contact' },
-    { name: language === 'pl' ? 'Mapa Witryny' : 'Sitemap', href: '/sitemap.xml' }
+    { name: language === 'pl' ? 'Mapa Witryny' : 'Sitemap', href: '/sitemap' }
   ];
 
   const handleScrollToSection = (sectionId: string) => {

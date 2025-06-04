@@ -19,12 +19,10 @@ const UserSitemap: React.FC = () => {
 
   const services = [
     { name: t.services.title, href: '/#services', icon: <Code className="w-5 h-5 text-violet-400" /> },
-    // Add specific service links here if needed later
   ];
 
   const portfolio = [
     { name: t.portfolio.title, href: '/#portfolio', icon: <Briefcase className="w-5 h-5 text-violet-400" /> },
-    // Add specific project links here if needed later
   ];
 
   const legalDocuments = [
@@ -77,21 +75,19 @@ const UserSitemap: React.FC = () => {
             whileTap={{ scale: 0.95 }}
           >
             <div className="flex items-center gap-2">
-               <div className="w-8 h-8 rounded-full bg-violet-600/20 flex items-center justify-center border border-violet-500/30">
-                 <FileText className="w-5 h-5 text-violet-400" />
-               </div>
-               <span className="relative">
-                 {language === 'pl' ? 'Zobacz sitemap.xml' : 'View sitemap.xml'}
-                 <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
-               </span>
+              <FileText className="w-5 h-5 text-violet-400" />
+              <span className="relative">
+                {language === 'pl' ? 'Zobacz sitemap.xml' : 'View sitemap.xml'}
+                <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
+              </span>
             </div>
           </motion.a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Main Pages */}
           <motion.div
-            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10"
+            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10 hover:border-violet-500/20 transition-colors duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -110,7 +106,7 @@ const UserSitemap: React.FC = () => {
                     <div className="mr-3">{page.icon}</div>
                     <span className="relative">
                       {page.name}
-                       <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
+                      <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
                     </span>
                   </button>
                 </li>
@@ -120,7 +116,7 @@ const UserSitemap: React.FC = () => {
 
           {/* Services */}
           <motion.div
-            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10"
+            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10 hover:border-violet-500/20 transition-colors duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -136,7 +132,7 @@ const UserSitemap: React.FC = () => {
                     onClick={() => handleLinkClick(service.href)}
                     className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group w-full text-left"
                   >
-                     <div className="mr-3">{service.icon}</div>
+                    <div className="mr-3">{service.icon}</div>
                     <span className="relative">
                       {service.name}
                       <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
@@ -148,8 +144,8 @@ const UserSitemap: React.FC = () => {
           </motion.div>
 
           {/* Portfolio */}
-           <motion.div
-            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10"
+          <motion.div
+            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10 hover:border-violet-500/20 transition-colors duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -162,11 +158,11 @@ const UserSitemap: React.FC = () => {
               {portfolio.map((item, index) => (
                 <li key={index}>
                   <button
-                     onClick={() => handleLinkClick(item.href)}
+                    onClick={() => handleLinkClick(item.href)}
                     className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group w-full text-left"
                   >
-                     <div className="mr-3">{item.icon}</div>
-                     <span className="relative">
+                    <div className="mr-3">{item.icon}</div>
+                    <span className="relative">
                       {item.name}
                       <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
                     </span>
@@ -177,8 +173,8 @@ const UserSitemap: React.FC = () => {
           </motion.div>
 
           {/* Legal Documents */}
-           <motion.div
-            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10"
+          <motion.div
+            className="bg-black/20 backdrop-blur-sm rounded-2xl p-8 border border-violet-500/10 hover:border-violet-500/20 transition-colors duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -191,10 +187,10 @@ const UserSitemap: React.FC = () => {
               {legalDocuments.map((doc, index) => (
                 <li key={index}>
                   <button
-                     onClick={() => handleLinkClick(doc.href)}
+                    onClick={() => handleLinkClick(doc.href)}
                     className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center group w-full text-left"
                   >
-                     <div className="mr-3">{doc.icon}</div>
+                    <div className="mr-3">{doc.icon}</div>
                     <span className="relative">
                       {doc.name}
                       <span className="absolute bottom-0 left-1/2 w-0 h-px bg-violet-400 transform -translate-x-1/2 group-hover:w-full transition-all duration-300"></span>
